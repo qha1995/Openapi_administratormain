@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="gnb_left"></nav>
+        <div class="wrap_contents">
+
+            <div class="status_bar"></div>
+            <div class="contents">
+                <!-- page content start  -->
+                <div class="wrap_breadcrumb">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs_item"><a href="javascript:;">시스템 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">메뉴 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">메뉴 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">메뉴 목록</a></li>
+                    </ul>
+                </div>
+                <h2 class="page_title">메뉴 목록</h2>
+                <div class="page_content">
+                    <div class="search_bar">
+                        <span class="search_label">메뉴 명</span>
+                            <input type="text" placeholder="검색어를 입력해 주세요." value="" class="search_combo_input">
+                            <button class="search_combo_btn btn_search">검색</button>
+                    </div>
+                    <div class="wrap_btns_top">
+                        <a type="button" class="btn_inline add lined" onclick="openPop('layer','popRegMenu'); return false;">일괄 등록</a>
+                        <a class="btn_inline add" href="01시스템관리_02메뉴관리_02메뉴 관리_03메뉴 등록.html">등록</a>
+                    </div>
+                    <!-- table -->
+                    <div class="wrap_table">
+                        <table class="table table_list">
+                            <caption>메뉴 목록</caption>
+                            <colgroup>
+                                <col style="width:140px;">
+                                <col style="width:140px;">
+                                <col style="width:180px;">
+                                <col style="width:auto; min-width: 220px;">
+                                <col style="width:140px;">
+                                <col style="width:210px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">메뉴 번호</th>
+                                    <th scope="col">메뉴 명</th>
+                                    <th scope="col">프로그램 파일 명</th>
+                                    <th scope="col">상위 메뉴 번호</th>
+                                    <th scope="col">메뉴 설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr onClick="location.replace('#none');"> -->
+                                <tr onClick="location.href='../html/01시스템관리_02메뉴관리_02메뉴 관리_03메뉴 등록.html';">
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>ROOT</td>
+                                    <td>DIR</td>
+                                    <td>0</td>
+                                    <td>ROOT</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>2</td>
+                                    <td>100000001</td>
+                                    <td>사용자 디렉토리</td>
+                                    <td>EgovGroupList</td>
+                                    <td>100000001</td>
+                                    <td>사용자디렉토리/통합인증</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>3</td>
+                                    <td>100000002</td>
+                                    <td>보안</td>
+                                    <td>SelectEgovGroupList</td>
+                                    <td>100000002</td>
+                                    <td>보안</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>4</td>
+                                    <td>100000003</td>
+                                    <td>게시판 속성</td>
+                                    <td>EgovAuthorList</td>
+                                    <td>100000003</td>
+                                    <td>권한 관리</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>5</td>
+                                    <td>100000004</td>
+                                    <td>이력 구분</td>
+                                    <td>CnstlAnswerListInquire</td>
+                                    <td>100000004</td>
+                                    <td>이력 관리</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>6</td>
+                                    <td>100000005</td>
+                                    <td>템플릿 유형</td>
+                                    <td>CnstlAnswerListInquire</td>
+                                    <td>100000005</td>
+                                    <td>템플릿 유형</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>7</td>
+                                    <td>100000006</td>
+                                    <td>승인 상태</td>
+                                    <td>CnstlListInquire</td>
+                                    <td>100000006</td>
+                                    <td>승인/반려 관리</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>8</td>
+                                    <td>100000007</td>
+                                    <td>처리 상태</td>
+                                    <td>EgovAuthorList</td>
+                                    <td>100000007</td>
+                                    <td>요청 처리 관리</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>9</td>
+                                    <td>100000008</td>
+                                    <td>로그인 확인</td>
+                                    <td>CnstlListInquire</td>
+                                    <td>100000008</td>
+                                    <td>로그인 확인 관리</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>10</td>
+                                    <td>100000009</td>
+                                    <td>권한 유형</td>
+                                    <td>CnstlAnswerListInquire</td>
+                                    <td>100000009</td>
+                                    <td>권한 유형 관리</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- table end -->
+                </div>
+                <!-- page content end -->
+
+                <!-- pagenation -->
+                <div class="wrap_pagenation">
+                    <ul class="pagenation">
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+                        </ul>
+                </div>
+                <!-- pagenation end -->
+            </div>
+            <!-- contents end -->
+
+            <footer class="footer_admin"></footer>
+        </div>
+        <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- popup_layer pop_lg-->
+    <div class="mask"></div>
+    <div class="popup_layer pop_lg popup_menu" id="popRegMenu">
+        <div class="pop_title">
+            <h3>메뉴일괄 등록</h3>
+            <button type="button" class="popup_close" onclick="closePop('layer','popRegMenu'); return false;"></button>
+        </div>
+        <div class="inner">
+            <div class="box_search ">
+                <!-- btn_upload  파일선택 -->
+                <div class="box_upload_file">
+                    <div class="viewer_file">파일을 선택해주세요.</div>
+                    <input type="file" id="file_input_type01" class="attached_file">
+                    <label class="btn_upload btn_inline lined" for="file_input_type01">파일선택
+                    </label>
+                </div>
+                <p class="attached_note">※ 엑셀 양식으로 업로드 해주세요.</p>
+                <!-- attached_file_name -->
+                <!-- <div class="box_upload_file box_attached_file">
+                    <label class="btn_upload btn_inline lined" for="file_input_type01">파일선택</label>
+                    <input type="file" id="file_input_type01" class="attached_file">
+                </div> -->
+                <!-- <p class="attached_note">※ 엑셀 양식으로 업로드 해주세요.</p> -->
+                <!-- <div class="box_file_viewer">
+                    <p class="attached_file_name">첨부.xlsx</p>
+                </div> -->
+            </div>
+        </div>
+        <div class="wrap_btns">
+            <button type="submit" class="btn_submit btn_submit btn_download lined">양식 다운로드</button>
+            <!-- 비활성화 버튼 disabled 클래스 추가 -->
+            <!-- <button type="submit" class="btn_submit btn_all disabled">일괄 등록</button> -->
+            <button type="submit" class="btn_submit btn_all" onclick="openPop('layer','smPop'); return false;">일괄 등록</button>
+        </div>
+    </div>
+    <!-- popup_layer pop_lg end -->
+    <!-- pop_sm-->
+    <div class="popup_layer pop_sm" id="smPop">
+        <div class="pop_title">
+            <button type="button" class="popup_close" onclick="closePop('layer','smPop'); return false;"></button>
+        </div>
+        <div class="inner">
+            <p class="note_info">등록되었습니다.</p>
+        </div>
+        <div class="wrap_btns">
+            <button type="submit" class="btn_submit filled_blue" onclick="closePop('layer','smPop'); return false;">확인</button>
+        </div>
+    </div>
+    <!-- pop_sm end -->
+    <script>
+        $(window).ready(function() {
+
+            /**  파일 첨부 */
+            $(".attached_file").change(function() {
+                var files = $(".attached_file")[0].files;
+                $(this).siblings(".viewer_file").text(files[0].name);
+            });
+
+        });
+
+        $(document).on("click", ".mask", function() {
+            closePop();
+        });
+        /** 팝업 열기  */
+        function openPop(type, id) {
+            $("#" + id).addClass("open");
+            if (type == "layer") {
+                $(".popup_layer").fadeOut();
+                $("#" + id).fadeIn();
+            }
+            $(".mask").fadeIn();
+
+            $("body").css({
+                overflow: "hidden",
+            });
+        }
+        /** 팝업 닫기  */
+        function closePop(id) {
+            $("#" + id).removeClass("open");
+            $(".popup_layer").fadeOut();
+            $(".mask").fadeOut();
+
+            $("body").css({
+                overflow: "unset",
+            });
+        }
+    </script>
+</body>
+
+</html>

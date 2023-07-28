@@ -1,0 +1,287 @@
+@charset "UTF-8";
+// @import "mixset.scss";
+//  Color System common $SCSS
+$color_white: #fff;
+$color_f5: #f5f5f5;
+$color_aaa: #aaa;
+$color_ddd: #ddd;
+$color_eee: #eee;
+$color_red: #f00;
+$color_black: #111;
+$color_blue: #1953d5;
+$color_blue_disabled: #a3baee;
+// /* Color admin mainA */
+$color_mainA_indigo: #131f55;
+$color_mainA_duskblue: #26357c;
+// /* Color user mainU*/
+$color_mainU_navy: #15285f;
+// /* font */
+$font_regular: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font_medium: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font_bold: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+// /* mixin style */
+// /* flex */
+.flex_center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+@mixin flex_center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+// /*  button style */
+@mixin filled_blue {
+  color: #fff;
+  background-color: #1953d5;
+}
+@mixin lined_blue {
+  color: #1953d5;
+  background-color: #fff;
+  border: 1px solid #1953d5;
+}
+@mixin filled_dark {
+  color: #fff;
+  background-color: #15285f;
+}
+@mixin lined_dark {
+  color: #15285f;
+  background-color: #fff;
+  border: 1px solid #15285f;
+}
+@mixin filled_gray {
+  color: #111;
+  background-color: #eee;
+}
+@mixin lined_black {
+  color: #111;
+  background-color: #fff;
+  border: 1px solid #111;
+}
+@mixin lined_white {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+@mixin line_height_40 {
+  line-height: 4rem;
+}
+@mixin line_height_38 {
+  line-height: 3.8rem;
+}
+@mixin line_height_20 {
+  line-height: 2rem;
+}
+@mixin line_height_18 {
+  line-height: 1.8rem;
+}
+// width: rem;
+// height: rem;
+// background-image: url("../../public/img/");
+@mixin bg_center {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+@mixin bg_after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+@mixin after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  // /* 		width: rem;
+  // 		height: rem;
+  // 		background-image: url("../../public/img/"); */
+}
+@mixin before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  // /* 	width: rem;
+  // 	height: rem;
+  // 	background-image: url("../../public/img/"); */
+}
+
+//  border
+@mixin b_ddd {
+  border: 1px solid $color_ddd;
+}
+@mixin b_f5 {
+  border: 1px solid $color_f5;
+}
+@mixin bb_f5 {
+  border-bottom: 1px solid $color_f5;
+}
+@mixin bt_f5 {
+  border-top: 1px solid $color_f5;
+}
+@mixin br_f5 {
+  border-right: 1px solid $color_f5;
+}
+@mixin bl_f5 {
+  border-left: 1px solid $color_f5;
+}
+@mixin bb_ddd {
+  border-bottom: 1px solid $color_ddd;
+}
+@mixin bt_ddd {
+  border-top: 1px solid $color_ddd;
+}
+@mixin br_ddd {
+  border-right: 1px solid $color_ddd;
+}
+@mixin bl_ddd {
+  border-left: 1px solid $color_ddd;
+}
+
+// 반응형 관련
+@mixin unset_all {
+  all: unset;
+}
+
+// transform position unset
+@mixin unset_transform {
+  transform: unset;
+  transform: translate(0, 0);
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: unset;
+}
+
+// transform float unset
+@mixin unset_float {
+  float: unset;
+}
+@mixin unset_clear {
+  clear: unset;
+}
+
+// 추가 scsss
+
+//rgba
+.test_1 {
+  color: rgba(0, 0, 0, 0.5);
+}
+.test_2 {
+  color: rgba(#000, 0.5);
+} //매개변수 2개(#16 진수 색상 코드, opacity)로 가능
+
+//연산
+.test_3 {
+  line-height: calc(26 / 20);
+} //line-height:1.3;
+.test_4 {
+  width: percentage(480 / 960);
+} //width:50%;
+
+//변수 사용
+$width: 960;
+$main_color: #d33;
+.test_5 {
+  width: percentage(300 / $width); //width:31.25%;
+  background-color: $main_color; //background-color:#d33;
+}
+
+//변수 삽입하는 경우 #{$변수명}
+$path: "test";
+.test_6 {
+  background-image: url("#{$path}/img.png");
+} //background-image:url("test/img.png");
+
+//조건문
+$i: 10;
+@if ($i == 10) {
+  //참인 경우 실행
+  .test_7 {
+    width: 100px;
+  }
+}
+
+@mixin my-mixin($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+.test_mixin {
+  @include my-mixin(100px, 200px);
+}
+
+//컴파일 후
+// .test_mixin	{
+// 	width:100px;
+// 	height:100px;
+// }
+
+// function: 하나의 값을 반환
+@function my-func($num1, $num2) {
+  @return percentage($num1 / $num2);
+}
+
+.test_func {
+  width: my-func(100, 200);
+}
+
+//컴파일 후
+// .test_func	{width:50%;}
+
+// /* width height */
+// @mixin percent_w0 { width: 0;}
+// @mixin percent_w10 { width: 10%;}
+// @mixin percent_w20 { width: 20%;}
+// @mixin percent_w30 { width: 30%;}
+// @mixin percent_w40 { width: 40%;}
+// @mixin percent_w50 { width: 50%;}
+// @mixin percent_w60 { width: 60%;}
+// @mixin percent_w70 { width: 70%;}
+// @mixin percent_w80 { width: 80%;}
+// @mixin percent_w90 { width: 90%;}
+// @mixin percent_w100 { width: 100%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin percent_h0 { height: 0%;}
+// @mixin w1 {width: 1rem;}
+// @mixin w {width: rem;}
+// @mixin w {width: rem;}
+// @mixin w {width: rem;}
+// @mixin w {width: rem;}
+// @mixin w {width: rem;}
+// @mixin w {width: rem;}
+// @mixin w {width: rem;}
+// @mixin w {width: rem;}
+// @mixin w {width: rem;}
+// @mixin h {height: rem;}

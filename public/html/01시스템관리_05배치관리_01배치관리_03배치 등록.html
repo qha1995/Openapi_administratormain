@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+
+<body class="">
+    <div class="wrapper">
+        <nav class="gnb_left"></nav>
+        <div class="wrap_contents">
+
+            <div class="status_bar"></div>
+            <div class="contents">
+                <!-- page content start  -->
+                <div class="wrap_breadcrumb">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs_item"><a href="javascript:;">시스템 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">배치 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">배치 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">배치 등록</a></li>
+                    </ul>
+                </div>
+                <h2 class="page_title">배치 등록</h2>
+                <div class="page_content">
+                    <!-- table -->
+                    <div class="wrap_table">
+                        <table class="table table_row">
+                            <caption>배치 등록</caption>
+                            <colgroup>
+                                <col style="width:180px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">배치 작업 명</p>
+                                    </th>
+                                    <td>
+                                        <div class="box_search">
+                                            <input type="text" placeholder="배치 작업 명을 입력해주세요." value="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">배치 프로그램</p>
+                                    </th>
+                                    <td>
+                                        <div class="box_search">
+                                            <input type="text" placeholder="배치 프로그램을 입력해주세요." value="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p>파라미터</p>
+                                    </th>
+                                    <td>
+                                        <input type="text" placeholder="파라미터를 입력해주세요." value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="4">
+                                        <p class="asterisk">실행 주기</p>
+                                    </th>
+                                    <!-- <td class="sub_thead"> -->
+                                        <td class="flex">
+                                        <span class="sub_thead">주기</span>
+                                        <div class="wrap_radio">
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd10" name="rdo_group10">
+                                                <label for="rd10" class="label_txt">한 번만</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd11" name="rdo_group10">
+                                                <label for="rd11" class="label_txt">매일</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd12" name="rdo_group10">
+                                                <label for="rd12" class="label_txt">매주</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd12" name="rdo_group10">
+                                                <label for="rd12" class="label_txt">매월</label>
+                                            </div>
+                                        </div>
+                                        <!-- <p>한 번만</p> -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="flex">
+                                        <span class="sub_thead">시각</span>
+                                        <div class="box_time">
+                                            <input type="time" id="time_input11" class="time">
+                                        </div>
+                                        <!-- <p>06:30:20</p> -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="flex">
+                                        <span class="sub_thead">시작일</span>
+                                        <!-- <div class="box_daterange"> -->
+                                        <div class="box_datepicker">
+                                            <input type="text" id="dateStart" class="datepicker" placeholder="YYYY-MM-DD">
+                                        </div>
+                                        <!-- <p>2022-10-12</p> -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="flex">
+                                        <span class="sub_thead">요일</span>
+                                        <div class="wrap_check">
+                                            <div class="box_checkbox">
+                                                <input type="checkbox" class="checkbox" id="ch01" name="ch_group10">
+                                                <label for="ch01" class="label_txt">월</label>
+                                            </div>
+                                            <div class="box_checkbox">
+                                                <input type="checkbox" class="checkbox" id="ch11" name="ch_group10">
+                                                <label for="ch11" class="label_txt">화</label>
+                                            </div>
+                                            <div class="box_checkbox">
+                                                <input type="checkbox" class="checkbox" id="ch12" name="ch_group10">
+                                                <label for="ch12" class="label_txt">수</label>
+                                            </div>
+                                            <div class="box_checkbox">
+                                                <input type="checkbox" class="checkbox" id="ch13" name="ch_group10">
+                                                <label for="ch13" class="label_txt">목</label>
+                                            </div>
+                                            <div class="box_checkbox">
+                                                <input type="checkbox" class="checkbox" id="ch14" name="ch_group10">
+                                                <label for="ch14" class="label_txt">금</label>
+                                            </div>
+                                            <div class="box_checkbox">
+                                                <input type="checkbox" class="checkbox" id="ch15" name="ch_group10">
+                                                <label for="ch15" class="label_txt">토</label>
+                                            </div>
+                                            <div class="box_checkbox">
+                                                <input type="checkbox" class="checkbox" id="ch16" name="ch_group10">
+                                                <label for="ch16" class="label_txt">일</label>
+                                            </div>
+                                        </div>
+                                        <!-- <p>월,수,금</p> -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <!-- page content end -->
+                <!-- wrap_btns -->
+                <div class="wrap_btns">
+                    <a href="javascript:;" target="_self" class="btn_submit filled_gray">취소</a>
+                    <a href="javascript:;" target="_self" class="btn_submit filled_blue">등록</a>
+                </div>
+                <!-- wrap_btns end -->
+            </div>
+            <!-- contents end -->
+
+            <footer class="footer_admin"></footer>
+        </div>
+        <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+
+</body>
+
+</html>

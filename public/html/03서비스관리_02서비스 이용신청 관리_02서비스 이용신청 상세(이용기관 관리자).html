@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공공서비스 개방 플랫폼 관리자</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/fontset.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- JS -->
+  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+  <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/app.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="gnb_left"></nav>
+    <div class="wrap_contents">
+      <div class="status_bar"></div>
+      <div class="contents">
+        <!-- page content start  -->
+        <div class="wrap_breadcrumb">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">서비스 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">서비스 이용신청 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">서비스 이용신청 상세</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="page_title">서비스 이용신청 상세</h2>
+        <div class="page_content">
+          <h3 class="table_title">서비스 신청 정보</h3>
+          <table class="table table_row text_start no_rl">
+            <caption>서비스 신청 정보</caption>
+            <colgroup>
+              <col style="width: 180px" />
+              <col style="width: auto" />
+              <col style="width: 180px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <p class="">신청구분</p>
+                </th>
+                <td>
+                  <p class="">신규</p>
+                </td>
+                <th scope="row">
+                  <p class="">재발급사유</p>
+                </th>
+                <td>
+                  <p class=""></p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">이용기관명</p>
+                </th>
+                <td>
+                  <p class="">네이버</p>
+                </td>
+                <th scope="row">
+                  <p class="">신청상태</p>
+                </th>
+                <td>
+                  <p class="">승인</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">이용기관 부서명</p>
+                </th>
+                <td>
+                  <p class="">네이버 클라우드</p>
+                </td>
+                <th scope="row">
+                  <p class="">담당자명</p>
+                </th>
+                <td>
+                  <p class="">김길동</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">담당자 휴대전화</p>
+                </th>
+                <td>
+                  <p class="">010-1234-1234</p>
+                </td>
+                <th scope="row">
+                  <p class="">담당자 이메일</p>
+                </th>
+                <td>
+                  <p class="">Test~@naver.com</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">활용분야</p>
+                </th>
+                <td colspan="3">
+                  <div class="wrap_check">
+                    <div class="box_checkbox">
+                      <input type="checkbox" class="checkbox" id="ch01" name="ch_group01" checked>
+                      <label for="ch01" class="label_txt">WEB</label>
+                    </div>
+                    <div class="box_radio">
+                      <input type="checkbox" class="checkbox" id="ch02" name="ch_group01">
+                      <label for="ch02" class="label_txt">모바일 앱 / Android</label>
+                    </div>
+                    <div class="box_radio">
+                      <input type="checkbox" class="checkbox" id="ch03" name="ch_group01">
+                      <label for="ch03" class="label_txt">모바일 앱 / iOS</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+             <tr>
+                <th scope="row">
+                  <p class="">연계 목적</p>
+                </th>
+                <td colspan="3">
+                  <p>서비스 연계</p>
+                </td>
+             </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">신청자</p>
+                </th>
+                <td>
+                  <p class="">김길동</p>
+                </td>
+                <th scope="row">
+                  <p class="">신청일자</p>
+                </th>
+                <td>
+                  <p class="">2022-10-23</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">임시KEY</p>
+                </th>
+                <td>
+                  <p class="">DDD00FD0G030D-S0-DF</p>
+                </td>
+                <th scope="row">
+                  <p class="">승인일자</p>
+                </th>
+                <td>
+                  <p class="">2022-10-24</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">반려 사유</p>
+                </th>
+                <td colspan="3">
+                  <!-- <p>신청상태가 반려일 경우 반려사유 표시</p> -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="table_title">이용 기관 서버 정보</h3>
+          <table class="table table_row text_start no_rl">
+            <caption>이용 기관 서버 정보</caption>
+            <colgroup>
+              <col style="width: 180px" />
+              <col style="width: auto" />
+              <col style="width: 180px" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <p class="">시스템 명</p>
+                </th>
+                <td>
+                  <p class="">네이버 연계서버 #1</p>
+                </td>
+                <th scope="row">
+                  <p class="">서버 구분</p>
+                </th>
+                <td>
+                  <p class="">운영서버</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">시스템 IP</p>
+                </th>
+                <td>
+                  <p class="">123.123.123.123</p>
+                </td>
+                <th scope="row">
+                  <p class="">통신망 구분</p>
+                </th>
+                <td>
+                  <p class="">인터넷망</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">시스템 PORT</p>
+                </th>
+                <td>
+                  <p class="">9998</p>
+                </td>
+                <th scope="row">
+                  <p class="">설치장소 구분</p>
+                </th>
+                <td>
+                  <p class="">대전통합전산센터</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">관리자 명</p>
+                </th>
+                <td>
+                  <p class="">김관리</p>
+                </td>
+                <th scope="row">
+                  <p class="">관리자 부서</p>
+                </th>
+                <td>
+                  <p class="">네이버 클라우드</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">관리자 전화번호</p>
+                </th>
+                <td>
+                  <p class="">010-1234-1234</p>
+                </td>
+                <th scope="row">
+                  <p class="">관리자 이메일</p>
+                </th>
+                <td>
+                  <p class="">Test~@naver.com</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p class="">기타 정보</p>
+                </th>
+                <td colspan="3">
+                  <p></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="wrap_btns">
+          <a href="javascript:;" target="_self" class="btn_submit lined_black">수정</a>
+          <a href="javascript:;" target="_self" class="btn_submit lined_black disabled">수정</a>
+          <a href="javascript:;" target="_self" class="btn_submit lined_blue">임시 KEY<br>재발급신청</a>
+          <a href="javascript:;" target="_self" class="btn_submit lined_blue disabled">임시 KEY<br>재발급신청</a>
+          <a href="03서비스관리_02서비스 이용신청 관리_01서비스 이용신청 목록(이용기관 관리자).html" target="_self" class="btn_submit filled_blue">목록</a>
+        </div>
+      <!-- page content end -->
+    </div>
+    <!-- contents end -->
+
+    <footer class="footer_admin"></footer>
+  </div>
+  <!-- wrap_contents end -->
+  </div>
+  <!-- wrapper end -->
+
+</body>
+
+</html>

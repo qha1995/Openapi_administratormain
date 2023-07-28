@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두모아서</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- nav.js -->
+        <nav class="gnb_left"></nav>
+        <div class="wrap_contents">
+
+            <!-- <button>sdasda</button>
+            <select name="" id="">
+                <option value="">1</option>
+                <option value="">2</option>
+            </select> -->
+            <div class="status_bar"></div>
+            <div class="contents" id="page pageName">
+                <!-- page content start  -->
+                <h2 class="page_title">page_title</h2>
+                <div class="page_content">
+
+                    <!-- wrap_btns -->
+                    <div class="wrap_btns">
+                        <a class="btn_submit filled_gray" href="javascript:;" target="_self" role="button">취소</a>
+                        <a class="btn_submit lined_black" href="javascript:;" target="_self" role="button">수정</a>
+                        <a class="btn_submit lined_blue" href="javascript:;" target="_self" role="button">삭제</a>
+                        <a class="btn_submit filled_blue" href="javascript:;" target="_self" role="button">목록</a>
+                    </div>
+                    <!-- wrap_btns end -->
+                    <h4 class="flex_center">페이지내에서 기능이 이루어지는 버튼 = button </h4>
+                    
+                    <!-- wrap_btns -->
+                    <div class="wrap_btns">
+                        <a class="btn_submit filled_gray" href="javascript:;" target="_self">취소</a>
+                        <a class="btn_submit lined_black" href="javascript:;" target="_self">수정</a>
+                        <a class="btn_submit lined_blue" href="javascript:;" target="_self">삭제</a>
+                        <a class="btn_submit filled_blue" href="javascript:;" target="_self">목록</a>
+                    </div>
+                    <!-- wrap_btns end -->
+                    <h4 class="flex_center">페이지 변환 or 링크 이동 버튼 = a </h4>
+
+                    <h2 class="flex_center mt3 mb3 gap20">6. Button System</h2>
+                    <!-- wrap_btns -->
+                    <div class="flex_center mt3 mb3 gap20">
+                        <a class="btn_submit filled_blue" href="javascript:;" target="_self">목록</a>
+                        <a class="btn_submit lined_blue" href="javascript:;" target="_self">삭제</a>
+                        <a class="btn_submit filled_dark" href="javascript:;" target="_self">등록</a>
+                        <a class="btn_submit lined_dark" href="javascript:;" target="_self">권한삭제</a>
+                        <a class="btn_submit filled_gray" href="javascript:;" target="_self">취소</a>
+                        <a class="btn_submit lined_black" href="javascript:;" target="_self">수정</a>
+                        <a class="btn_submit disabled" href="javascript:;" target="_self">일괄등록</a>
+                    </div>
+                    <!-- wrap_btns end -->
+                    <!-- inline btns -->
+                    <div class="flex_center mt3 mb3 gap20">
+                        <a class="btn_inline sm" href="javascript:;" target="_self">검색</a>
+                        <a class="btn_inline lined" href="javascript:;" target="_self">파일선택</a>
+                        <a class="btn_inline add" href="javascript:;" target="_self">등록</a>
+                        <a class="btn_inline lined add" href="javascript:;" target="_self">일괄 등록</a>
+                        <a class="btn_inline view" href="javascript:;" target="_self">미리보기</a>
+                        <a class="btn_inline add plat" href="javascript:;" target="_self">등록하기</a>
+                        <a class="btn_inline square" href="javascript:;" target="_self">로그인 연장</a>
+                    </div>
+
+                    <div class="flex_center mt3 mb3">
+                        <!-- btn_upload  파일선택 -->
+                        <div class="box_upload_file flex_b5">
+                            <div class="viewer_file">파일선택.gif</div>
+                            <label class="btn_upload btn_inline lined" for="file_input_type00">파일선택
+                                <input type="file" id="file_input_type00" multiple="" class="attached_file">
+                                <!-- <a href="" class="btn_upload btn_inline lined" >파일선택</a> -->
+                        </div>
+                    </div>
+
+                    <!-- wrap_btns end -->
+                    <!-- pagenation -->
+                    <div class="wrap_pagenation mt3 mb3">
+                        <ul class="pagenation">
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+                        </ul>
+                    </div>
+                    <!-- pagenation end -->
+                    <!-- btn_submit -->
+                    <div class="flex_center mt3 mb3 gap20">
+                        <a class="btn_submit filled_blue md" href="javascript:;" target="_self">확인</a>
+                        <a class="btn_submit btn_download lined" href="javascript:;" target="_self">양식 다운로드</a>
+                        <a class="btn_submit btn_all" href="javascript:;" target="_self">일괄 등록</a>
+                    </div>
+                    <!-- btn_submit end -->
+
+                    <h2 class="flex_center mt3 mb3">7. Icon System</h2>
+                    <!-- badge -->
+                    <div class="flex_center gap30">
+                        <span class="badge lined">공지</span>
+                        <!-- <span class="badge lined" href="javascript:;" target="_self">공지</span> -->
+                        <span class="badge filled" href="javascript:;" target="_self">TOP</span>
+                        <span class="badge lined" href="javascript:;" target="_self">NEW</span>
+                        <span class="badge lined" href="javascript:;" target="_self">대기</span>
+                        <span class="badge gray" href="javascript:;" target="_self">탈퇴</span>
+                        <span class="badge filled" href="javascript:;" target="_self">정상</span>
+                        <span class="badge lined category" href="javascript:;" target="_self">기타</span>
+                        <span class="badge lined category" href="javascript:;" target="_self">웹사이트</span>
+                        <span class="badge lined category" href="javascript:;" target="_self">모바일앱</span>
+                    </div>
+                    <!-- badge end -->
+
+                    <h2 class="flex_center mt3 mb3">8. Form System</h2>
+
+                    <div class="flex_center gap30 mb3">
+                        <!-- <div class="flex_center gap30 mb3" style="width: 500px;"> -->
+                        <h2 class="flex_center mt1 mb1 flex_b3">Basic</h2>
+                        <!-- Basic Form -->
+                        <input type="text" placeholder="">
+                        <h2 class="flex_center mt1 mb1 flex_b3">Disabled Form</h2>
+                        <!-- Disabled Form -->
+                        <input type="text" placeholder="" disabled>
+                        <h2 class="flex_center mt1 mb1 flex_b3">Read only</h2>
+                        <!-- Read only -->
+                        <input type="text" placeholder="" value="2020-10-12 20:30:10" readonly>
+                    </div>
+
+                    <div class="flex_center gap30 mb3 ">
+                        <h2 class="flex_center mt1 mb1">Date Form</h2>
+                        <div class="box_datepicker">
+                            <input type="text" id="dateStart" class="datepicker" placeholder="YYYY-MM-DD">
+                        </div>
+
+                        <!-- <div class="box_daterange">
+                            <input type="date" id="dateStart" class="datepicker" placeholder="YYYY-MM-DD">
+                            <div class="range"></div>
+                            <input type="date" id="date_end" class="datepicker" placeholder="YYYY-MM-DD">
+                        </div> -->
+
+                        <h2 class="flex_center mt1 mb1 ">Time Form</h2>
+                        <div class="box_time">
+                            <input type="time" id="time_input01" class="time">
+                        </div>
+                    </div>
+
+                    <div class="flex_center gap30 mt3 mb3 ">
+                        <span>slect</span>
+                        <div class="box_select">
+                            <select class="search_select">
+                                <option value="">사용여부</option>
+                                <option value="">YES</option>
+                                <option value="">NO</option>
+                            </select>
+                        </div>
+
+                        <span>box_search</span>
+                        <div class="box_search">
+                            <input type="text" placeholder="검색어를 입력해 주세요." value="">
+                            <button class="btn_search"></button>
+                        </div>
+                        <span>radio</span>
+                        <div class="wrap_radio">
+                            <div class="box_radio">
+                                <input type="radio" class="rdobtn" id="rd03" name="rdo_group02">
+                                <label for="rd03" class="label_txt">1</label>
+                            </div>
+                            <div class="box_radio">
+                                <input type="radio" class="rdobtn" id="rd04" name="rdo_group02">
+                                <label for="rd04" class="label_txt">2</label>
+                            </div>
+                        </div>
+                        <span>Check Box</span>
+                        <div class="wrap_check">
+                            <div class="box_checkbox">
+                                <input type="checkbox" class="checkbox" id="ch01" name="ch_group01">
+                                <label for="ch01" class="label_txt">1</label>
+                            </div>
+                            <div class="box_checkbox">
+                                <input type="checkbox" class="checkbox" id="ch02" name="ch_group01">
+                                <label for="ch02" class="label_txt">2</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="flex_center mt1 mb1">Titled Search Bar with Inline Buttons </h2>
+                    <!-- Titled Search Bar with Inline Buttons -->
+                    <div class="flex_center">
+                        <div class="box_search flex_center">
+                            <span class="tit_search">search Bar Title </span>
+                            <input type="text" placeholder="검색어를 입력해 주세요." value="">
+                            <a class="btn_inline lined" href="javascript:;" target="_self">메뉴 등록</a>
+                            <a class="btn_inline lined" href="javascript:;" target="_self">사이트맵 조회</a>
+                        </div>
+                    </div>
+
+                    <h2 class="flex_center mt1 mb1">Search Bar with ComboBox </h2>
+                    <div class="search_bar flex_center">
+                        <!-- <div class="box_select"> -->
+                        <span class="search_label">사용여부</span>
+                        <select class="search_select">
+                            <option value="">전체</option>
+                            <option value="">YES</option>
+                            <option value="">NO</option>
+                        </select>
+                        <!-- </div> -->
+                        <!-- <div class="box_search"> -->
+                            <input type="text" placeholder="검색어를 입력해 주세요." value="" class="search_combo_input">
+                            <button class="search_combo_btn btn_search">검색</button>
+                        <!-- </div> -->
+                    </div>
+
+                    <h2 class="flex_center mt1 mb1">Plain Search Bar</h2>
+                    <!-- <div class="flex_center"> -->
+                    <!-- <div class="search_bar flex_center"> -->
+                    <div class="box_search">
+                        <input type="text" placeholder="검색어를 입력해 주세요." value="">
+                        <button class="btn_search"></button>
+                    </div>
+
+                    <h2 class="flex_center mt3 mb3">9. Board System </h2>
+                    <div class="mt3 mb3">
+                        <h2 class="flex_center mt1 mb1">사용자 메뉴 - Board List</h2>
+                        <div class="flex_center">
+
+                        </div>
+                        <h2 class="flex_center mt1 mb1">사용자 메뉴 - Board View</h2>
+                        <div class="flex_center">
+
+                        </div>
+                        <h2 class="flex_center mt1 mb1">관리자 메뉴 - Board List</h2>
+                        <div class="flex_center">
+                            <!-- 관리자 메뉴 - Board List table_list -->
+                            <div class="wrap_table flex_center mt3 mb3">
+                                <table class="table table_list">
+                                    <caption>공관리자 메뉴 - Board List</caption>
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                        <col style="width:auto; min-width: 200px;">
+                                        <col style="width:100px;">
+                                        <col style="width:auto; min-width: 200px;">
+                                        <col style="width:140px;">
+                                        <col style="width:140px;">
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">제목</th>
+                                            <th scope="col">작성자</th>
+                                            <th scope="col">기간</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">첨부</th>
+                                            <th scope="col">조회수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="badge filled">TOP</a></td>
+                                            <td>1번 변경 공지</td>
+                                            <td>관리자</td>
+                                            <td>2022-10-18 ~ 2022-11-18</td>
+                                            <td>2022-09-18</td>
+                                            <td>icon</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge filled">TOP</a></td>
+                                            <td>2번 변경 공지</td>
+                                            <td>관리자</td>
+                                            <td>2022-10-18 ~ 2022-11-18</td>
+                                            <td>2022-09-18</td>
+                                            <td>icon</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge filled">TOP</a></td>
+                                            <td>3번 변경 공지</td>
+                                            <td>관리자</td>
+                                            <td>2022-10-18 ~ 2022-11-18</td>
+                                            <td>2022-09-18</td>
+                                            <td>icon</td>
+                                            <td>300</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 관리자 메뉴 - Board List table_list -->
+                        </div>
+
+                        <h2 class="flex_center mt1 mb1">관리자 메뉴 - Board View</h2>
+                        <div class="flex_center">
+                            <!-- 관리자 메뉴 - Board View table_row  -->
+                            <div class="wrap_table flex_center mt3 mb3">
+                                <table class="table table_row">
+                                    <caption>관리자 메뉴 - Board View</caption>
+                                    <colgroup>
+                                        <col style="width:180px;">
+                                        <col style="width:100px;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <p class="asterisk">배치 작업 ID</p>
+                                            </th>
+                                            <td colspan="3">
+                                                <!-- <input type="text" placeholder="를 입력해주세요." value="ID"> -->
+                                                <p>ID</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <p class="asterisk">배치 작업 ID</p>
+                                            </th>
+                                            <td colspan="3">
+                                                <!-- <input type="text" placeholder="를 입력해주세요." value="ID"> -->
+                                                <p>ID</p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row" rowspan="4">
+                                                <p class="asterisk">00</p>
+                                            </th>
+                                            <td class="sub_thead" colspan="1">
+                                                <p>주기</p>
+                                            </td>
+                                            <td colspan="2">
+                                                <p>한 번만</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sub_thead" colspan="1">
+                                                <p>시각</p>
+                                            </td>
+                                            <td colspan="2">
+                                                <p>06:30:20</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sub_thead" colspan="1">
+                                                <p>시작일</p>
+                                            </td>
+                                            <td colspan="2">
+                                                <p>2022-10-12</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sub_thead" colspan="1">
+                                                <p>요일</p>
+                                            </td>
+                                            <td colspan="2">
+                                                <p>월,수,금</p>
+                                            </td>
+                                        </tr>
+
+                                        <!-- <div class="box_search">
+                                                <input type="text" placeholder="코드 명을 입력해주세요.">
+                                                <button class="btn_search">검색</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="box_search">
+                                                <input type="text" placeholder="코드 ID를 입력해주세요.">
+                                                <button class="btn_search">검색</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                  -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 상세 페이지 등록 테이블 table_row  end -->
+
+                            <!-- Board Write 2 -->
+
+                        </div>
+                        <!-- </div> -->
+
+
+                        <!-- 상세 페이지 등록 테이블 table_row  -->
+                        <div class="wrap_table flex_center mt3 mb3">
+                            <table class="table table_row">
+                                <caption>팝업 등록</caption>
+                                <colgroup>
+                                    <col style="width:180px;">
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                    <!-- 7~8 -->
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <p class="asterisk">팝업창 명</p>
+                                        </th>
+                                        <td colspan="2">
+                                            <input type="text" placeholder="팝업창 이름을 입력해주세요.">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p class="asterisk">팝업 URL</p>
+                                        </th>
+                                        <td colspan="2">
+                                            <input type="text" placeholder="팝업 URL을 입력해주세요.">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p class="asterisk">팝업창 위치</p>
+                                        </th>
+                                        <td colspan="1">
+                                            <div class="box_input_number">
+                                                <span>가로 위치</span>
+                                                <input type="number" placeholder="가로 좌표 입력">
+                                                <span>픽셀</span>
+                                            </div>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="box_input_number">
+                                                <span>세로 위치</span>
+                                                <input type="number" placeholder="세로 좌표 입력">
+                                                <span>픽셀</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p class="asterisk">팝업창 사이즈</p>
+                                        </th>
+                                        <td colspan="1">
+                                            <div class="box_input_number">
+                                                <span>Width</span>
+                                                <input type="number" placeholder="팝업창 너비 입력">
+                                                <span>픽셀</span>
+                                            </div>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="box_input_number">
+                                                <span>Height</span>
+                                                <input type="number" placeholder="팝업창 높이 입력">
+                                                <span>픽셀</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p class="asterisk">공지 대상</p>
+                                        </th>
+                                        <td colspan="2">
+                                            <div class="wrap_radio">
+                                                <div class="box_radio">
+                                                    <input type="radio" class="rdobtn" id="rd10" name="rdo_group10" checked="checked">
+                                                    <label for="rd10" class="label_txt">전체</label>
+                                                </div>
+                                                <div class="box_radio">
+                                                    <input type="radio" class="rdobtn" id="rd11" name="rdo_group10">
+                                                    <label for="rd11" class="label_txt">사용자</label>
+                                                </div>
+                                                <div class="box_radio">
+                                                    <input type="radio" class="rdobtn" id="rd12" name="rdo_group10">
+                                                    <label for="rd12" class="label_txt">관리자</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p class="asterisk">게시 기간</p>
+                                        </th>
+                                        <!-- 
+                                        <td colspan="2">
+                                            <div class="box_daterange">
+                                                <input type="date" id="dateStart" class="datepicker" placeholder="YYYY-MM-DD">
+                                                <div class="box_time">
+                                                    <input type="time" id="time_input10" class="time">
+                                                </div>
+                                                <div class="range"></div>
+                                                <input type="date" id="date_end" class="datepicker" placeholder="YYYY-MM-DD">
+                                                <div class="box_time">
+                                                    <input type="time" id="time_input11" class="time">
+                                                </div>
+                                            </div>
+                                        </td> -->
+                                        <div class="range"></div>
+                                        <td colspan="2">
+                                            <div class="box_datepicker">
+                                                <input type="text" id="dateStart" class="datepicker" placeholder="YYYY-MM-DD">
+                                            </div>
+                                            <!-- <div class="box_daterange">
+                                                <input type="date" id="dateStart" class="datepicker" placeholder="YYYY-MM-DD">
+                                                <div class="box_time">
+                                                    <input type="time" id="time_input10" class="time">
+                                                </div>
+                                            </div> -->
+                                        </td>
+                                        <!-- <td colspan="1">
+                                            <div class="box_daterange">
+                                                <input type="date" id="date_end" class="datepicker" placeholder="YYYY-MM-DD">
+                                                <div class="box_time">
+                                                    <input type="time" id="time_input11" class="time">
+                                                </div>
+                                            </div>
+                                        </td> -->
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p class="asterisk">그만보기 설정</p>
+                                        </th>
+                                        <td colspan="2">
+                                            <div class="wrap_radio">
+                                                <div class="box_radio">
+                                                    <input type="radio" class="rdobtn" id="rd13" name="rdo_group11" checked="checked">
+                                                    <label for="rd13" class="label_txt">하루동안 열지 않음</label>
+                                                </div>
+                                                <div class="box_radio">
+                                                    <input type="radio" class="rdobtn" id="rd14" name="rdo_group11">
+                                                    <label for="rd14" class="label_txt">다시 열지 않음</label>
+                                                </div>
+                                                <div class="box_radio">
+                                                    <input type="radio" class="rdobtn" id="rd15" name="rdo_group11">
+                                                    <label for="rd15" class="label_txt">설정 안 함</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <p class="asterisk">게시 상태</p>
+                                        </th>
+                                        <td colspan="2">
+                                            <div class="wrap_radio">
+                                                <div class="box_radio">
+                                                    <input type="radio" class="rdobtn" id="rd16" name="rdo_group12" checked="checked">
+                                                    <label for="rd16" class="label_txt">게시</label>
+                                                </div>
+                                                <div class="box_radio">
+                                                    <input type="radio" class="rdobtn" id="rd17" name="rdo_group12">
+                                                    <label for="rd17" class="label_txt">게시 안함</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 상세 페이지 등록 테이블 table_row  end -->
+
+                        <h2 class="flex_center mt2 mb2">10. Table System </h2>
+                        <h2 class="flex_center mt3 mb3">목록 페이지 테이블 table_list</h2>
+                        <!-- 목록 페이지 테이블 table_list -->
+                        <div class="wrap_table flex_center mt3 mb3">
+                            <table class="table table_list">
+                                <caption>공통코드 관리 리스트</caption>
+                                <colgroup>
+                                    <col style="width:140px;">
+                                    <col style="width:210px;">
+                                    <col style="width:220px;">
+                                    <col style="width:auto; min-width: 300px;">
+                                    <col style="width:160px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">번호</th>
+                                        <th scope="col">코드 ID</th>
+                                        <th scope="col">코드 명</th>
+                                        <th scope="col">코드 설명</th>
+                                        <th scope="col">사용 여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>COM001</td>
+                                        <td>등록 구분</td>
+                                        <td>등록을 구분합니다.</td>
+                                        <td>YES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>COM002</td>
+                                        <td>업무 구분</td>
+                                        <td>업무를 구분합니다.</td>
+                                        <td>YES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>COM003</td>
+                                        <td>승인 유형</td>
+                                        <td>승인의 유형을 정합니다.</td>
+                                        <td>YES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>COM004</td>
+                                        <td>게시판 속성</td>
+                                        <td>게시판의 속성을 정합니다.</td>
+                                        <td>YES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>COM005</td>
+                                        <td>이력 구분</td>
+                                        <td>이력을 구분합니다.</td>
+                                        <td>NO</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>COM006</td>
+                                        <td>템플릿 유형</td>
+                                        <td>템플릿의 유형을 정합니다.</td>
+                                        <td>YES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>COM007</td>
+                                        <td>승인 상태</td>
+                                        <td>승인 상태를 표시합니다.</td>
+                                        <td>YES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>COM008</td>
+                                        <td>처리 상태</td>
+                                        <td>처리 상태를 표시합니다.</td>
+                                        <td>YES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>COM009</td>
+                                        <td>로그인 확인</td>
+                                        <td>로그인 상태를 관리합니다.</td>
+                                        <td>YES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>COM0010</td>
+                                        <td>권한 유형</td>
+                                        <td>권한과 권한 유형을 관리합니다.</td>
+                                        <td>NO</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 목록 페이지 테이블 table_list end -->
+
+                        <h2 class="flex_center mt2 mb2">상세 페이지 등록 테이블 table_row</h2>
+                        <div class="flex_center mt3 mb3">
+                            <!-- 상세 페이지 등록 테이블 table_row  -->
+                            <div class="wrap_table flex_center mt3 mb3">
+                                <table class="table table_row">
+                                    <caption>공통상세코드 등록</caption>
+                                    <colgroup>
+                                        <col style="width:180px;">
+                                        <col style="width:auto; min-width: 300px;">
+                                        <col style="width:180px;">
+                                        <col style="width:auto; min-width: 300px;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">
+                                                <p class="asterisk">코드 명</p>
+                                            </th>
+                                            <td>
+                                                <div class="box_search">
+                                                    <input type="text" placeholder="코드 명을 입력해주세요.">
+                                                    <button class="btn_search"></button>
+                                                </div>
+                                            </td>
+                                            <th scope="row">
+                                                <p class="asterisk">코드 ID</p>
+                                            </th>
+                                            <td>
+                                                <div class="box_search">
+                                                    <input type="text" placeholder="코드 ID를 입력해주세요.">
+                                                    <button class="btn_search"></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <p class="asterisk">상세코드</p>
+                                            </th>
+                                            <td colspan="3">
+                                                <input type="text" placeholder="상세코드를 입력해주세요.">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <p class="asterisk">상세코드 명</p>
+                                            </th>
+                                            <td colspan="3">
+                                                <input type="text" placeholder="상세코드 명을 입력해주세요.">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <p>상세코드 설명</p>
+                                            </th>
+                                            <td colspan="3">
+                                                <div class="wrap_textarea">
+                                                    <textarea name="" id="" placeholder="상세코드 설명을 입력해주세요."></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <p class="asterisk">사용 여부</p>
+                                            </th>
+                                            <td colspan="3">
+                                                <div class="wrap_radio">
+                                                    <div class="box_radio">
+                                                        <input type="radio" class="rdobtn" id="rd20" name="rdo_group20">
+                                                        <label for="rd20" class="label_txt">YES</label>
+                                                    </div>
+                                                    <div class="box_radio">
+                                                        <input type="radio" class="rdobtn" id="rd21" name="rdo_group20">
+                                                        <label for="rd21" class="label_txt">NO</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 상세 페이지 등록 테이블 table_row  end -->
+                        </div>
+
+                        <h2 class="flex_center mt1 mb1">11. Popup System </h2>
+                        <div class="flex_center mt3 mb3 gap20">
+                            <button type="submit" class="btn_submit filled_blue" onclick="openPop('layer','lgPop'); return false;">
+                                lg popup btn 메뉴일괄 등록
+                            </button>
+                            <button type="submit" class="btn_submit lined_blue" onclick="openPop('layer','smPop'); return false;">
+                                sm popup btn
+                            </button>
+                        </div>
+
+                        <!-- popup_layer pop_lg-->
+                        <div class="popup_layer pop_lg" id="lgPop">
+                            <div class="pop_title">
+                                <h3>메뉴일괄 등록</h3>
+                                <button type="button" class="popup_close" onclick="closePop('layer','lgPop'); return false;"></button>
+                            </div>
+                            <div class="inner">
+                                <div class="box_search ">
+                                    <!-- btn_upload  파일선택 -->
+                                    <!-- <input type="file" id="file_input_type01" multiple=""> -->
+                                    <!-- btn_upload  파일선택 -->
+                                    <div class="box_upload_file">
+                                        <div class="viewer_file">파일을 선택해주세요.</div>
+                                        <input type="file" id="file_input_type01" class="attached_file">
+                                        <label class="btn_upload btn_inline lined" for="file_input_type01">파일선택
+                                        </label>
+                                    </div>
+                                    <p class="attached_note">※ 엑셀 양식으로 업로드 해주세요.</p>
+                                    <!-- <div class="box_upload_file flex_center">
+                                    <div class="viewer_file">파일선택.gif</div>
+                                    <label class="btn_upload btn_inline lined" for="file_input_type01">파일선택
+                                        <input type="file" id="file_input_type01 class="attached_file">
+                                    </label>
+                                </div>
+                                <p class="attached_note">※ 엑셀 양식으로 업로드 해주세요.</p> -->
+                                </div>
+                            </div>
+                            <div class="wrap_btns">
+                                <button type="submit" class="btn_submit btn_submit btn_download lined" href="javascript:;" target="_self">양식 다운로드</button>
+                                <button type="submit" class="btn_submit btn_all md" onclick="closePop('layer','lgPop'); return false;">일괄 등록</button>
+                            </div>
+                        </div>
+                        <!-- <div class="mask"></div> -->
+                        <!-- popup_layer pop_lg end -->
+
+                        <!-- pop_sm-->
+                        <div class="popup_layer pop_sm" id="smPop">
+                            <div class="pop_title">
+                                <button type="button" class="popup_close" onclick="closePop('layer','smPop'); return false;">
+                                    <div class="cross"></div>
+                                </button>
+                            </div>
+                            <div class="inner">
+                                <p class="note_info">등록되었습니다.</p>
+                            </div>
+                            <div class="wrap_btns">
+                                <button type="submit" class="btn_submit filled_blue" onclick="closePop('layer','smPop'); return false;">확인</button>
+                            </div>
+                        </div>
+                        <div class="mask"></div>
+                        <!-- pop_sm end -->
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <!-- page content end -->
+                </div>
+                <!-- contents end -->
+                <!-- nav.js -->
+            </div>
+            <footer class="footer_admin"></footer>
+            <!-- wrap_contents end -->
+        </div>
+        <!-- wrapper end -->
+        <script>
+            $(window).ready(function() {
+
+                // // 파일선택 후 파일 명 
+                // $('input[id="file_input_type"]').change(function() {
+                //     var files = $('input[id="file_input_type"]')[0].files;
+                //     $(this).parents().siblings(".file-name").children().text(files[0].name);
+                // });
+
+                /**  파일 첨부 */
+                $(".attached_file").change(function() {
+                    var files = $(".attached_file")[0].files;
+                    $(this).siblings(".viewer_file").text(files[0].name);
+                });
+
+                /** 다중 파일 첨부 - 파일 선택 후 파일 명 변경 */
+                $('input[id="fileMulti"]').change(function() {
+                    var multiFiles = $('input[id="fileMulti"]')[0].files;
+
+                    for (var i = 0; i < multiFiles.length; i++) {
+                        $(this)
+                            .parents().siblings(".file-name").append('<div class="file">' + '<input type="checkbox" id="Mchk' + i + '" class="chkbox" />' + '<label for="Mchk' + i + '">' + multiFiles[i].name + "</label></div>");
+                    }
+                    event.target.value = "";
+                });
+
+            });
+
+            // $(document).on("click", ".mask", function() {
+            //     closePop();
+            // });
+
+
+            $(document).on("click", ".mask", function() {
+                closePop();
+            });
+            /** 팝업 열기  */
+            function openPop(type, id) {
+                $("#" + id).addClass("open");
+                if (type == "layer") {
+                    $(".popup_layer").fadeOut();
+                    $("#" + id).fadeIn();
+                }
+                $(".mask").fadeIn();
+                $("body").css({
+                    overflow: "hidden",
+                });
+            }
+            /** 팝업 닫기  */
+            function closePop(id) {
+                $("#" + id).removeClass("open");
+                $(".popup_layer").fadeOut();
+                $(".mask").fadeOut();
+                $("body").css({
+                    overflow: "unset",
+                });
+            }
+
+
+            // function openPop(type, id) {
+            //     $("#" + id).addClass("open");
+
+            //     if (type == "layer") {
+            //         $(".popup_layer").fadeOut();
+            //         $("#" + id).fadeIn();
+            //     }
+            //     $(".mask").fadeIn();
+
+            //     $("body").css({
+            //         overflow: "hidden",
+            //     });
+            // }
+
+
+            // function closePop(id) {
+            //     $("#" + id).removeClass("open");
+            //     $(".popup_layer").fadeOut();
+            //     $(".mask").fadeOut();
+
+            //     $("body").css({
+            //         overflow: "unset",
+            //     });
+            // }
+
+            // function openPop(type, id) {
+            //   $("#" + id).addClass("open");
+
+            //   if (type == "layer") {
+            //     $(".popup_layer").fadeOut();
+            //     $("#" + id).fadeIn();
+            //   }
+            //   $(".mask").fadeIn();
+
+
+            // //   if (type == "bigPop") {
+            // //     $(".popup_layer").fadeOut();
+
+            // //     // var popupWidth = 1240;
+            // //     // var popupHeight = 800;
+
+            // //     // var popupX = window.screen.width / 2 - popupWidth / 2;
+
+            // //     // var popupY = window.screen.height / 2 - popupHeight / 2;
+
+            // //     window.open(
+            // //       id,
+            // //       "",
+            // //     //   "status=no, scrollbars=yes, resizable=yes",
+            // // //  height=
+            // // //         " + popupHeight +
+            // // //         ", width=" +
+            // // //         popupWidth +
+            // // //         ", left=" +
+            // // //         popupX +
+            // // //         ", top=" +
+            // // //         popupY
+            // //     );
+            // //   }
+
+            // //   if ($(".mask").hasClass("pop_mask")) {
+            // //     $(".mask").removeClass("pop_mask");
+            // //   }
+
+            // //   $("body").css({
+            // //     overflow: "hidden",
+            // //   });
+            // }
+        </script>
+</body>
+
+</html>

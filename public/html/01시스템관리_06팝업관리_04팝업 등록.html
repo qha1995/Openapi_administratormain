@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+
+<body class="">
+    <div class="wrapper">
+        <nav class="gnb_left"></nav>
+        <div class="wrap_contents">
+
+            <div class="status_bar"></div>
+            <div class="contents">
+                <!-- page content start  -->
+                <div class="wrap_breadcrumb">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs_item"><a href="javascript:;">시스템 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">팝업 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">팝업 등록</a></li>
+                    </ul>
+                </div>
+                <h2 class="page_title">팝업 등록</h2>
+                <div class="page_content">
+                    <!-- table -->
+                    <div class="wrap_table">
+                        <table class="table table_row">
+                            <caption>팝업 등록</caption>
+                            <colgroup>
+                                <col style="width:180px;">
+                                <col style="width:337px;">
+                                <col style="width:337px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">팝업창 명</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <input type="text" placeholder="팝업창 이름을 입력해주세요.">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">팝업 URL</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <input type="text" placeholder="팝업 URL을 입력해주세요.">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">팝업창 위치</p>
+                                    </th>
+                                    <td colspan="1">
+                                        <div class="box_input_number">
+                                            <span>가로 위치</span>
+                                            <input type="number" placeholder="가로 좌표 입력">
+                                            <span>픽셀</span>
+                                        </div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div class="box_input_number">
+                                            <span>세로 위치</span>
+                                            <input type="number" placeholder="세로 좌표 입력">
+                                            <span>픽셀</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">팝업창 사이즈</p>
+                                    </th>
+                                    <td colspan="1">
+                                        <div class="box_input_number">
+                                            <span>Width</span>
+                                            <input type="number" placeholder="팝업창 너비 입력">
+                                            <span>픽셀</span>
+                                        </div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div class="box_input_number">
+                                            <span>Height</span>
+                                            <input type="number" placeholder="팝업창 높이 입력">
+                                            <span>픽셀</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">공지 대상</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="wrap_radio">
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd10" name="rdo_group10" checked="checked">
+                                                <label for="rd10" class="label_txt">전체</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd11" name="rdo_group10">
+                                                <label for="rd11" class="label_txt">사용자</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd12" name="rdo_group10">
+                                                <label for="rd12" class="label_txt">관리자</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">게시 기간</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="wrap_range">
+
+                                            <div class="box_datepicker">
+                                                <input type="text" id="dateStart" class="datepicker" placeholder="YYYY-MM-DD">
+                                            </div>
+                                            <div class="box_time">
+                                                <input type="time" id="timeStart" class="time">
+                                            </div>
+                                            <span class="tilde"></span>
+                                            <div class="box_datepicker">
+                                                <input type="text" id="dateEnd" class="datepicker" placeholder="YYYY-MM-DD">
+                                            </div>
+                                            <div class="box_time">
+                                                <input type="time" id="timeEnd" class="time">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">그만보기 설정</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="wrap_radio">
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd13" name="rdo_group11" checked="checked">
+                                                <label for="rd13" class="label_txt">하루동안 열지 않음</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd14" name="rdo_group11">
+                                                <label for="rd14" class="label_txt">다시 열지 않음</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd15" name="rdo_group11">
+                                                <label for="rd15" class="label_txt">설정 안 함</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">게시 상태</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="wrap_radio">
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd16" name="rdo_group12" checked="">
+                                                <label for="rd16" class="label_txt">게시</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd17" name="rdo_group12">
+                                                <label for="rd17" class="label_txt">게시 안함</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- page content end -->
+                <!-- wrap_btns -->
+                <div class="wrap_btns">
+                    <a href="javascript:;" target="_self" class="btn_submit filled_gray">취소</a>
+                    <a href="javascript:;" target="_self" class="btn_submit filled_blue">등록</a>
+                </div>
+                <!-- wrap_btns end -->
+            </div>
+            <!-- contents end -->
+
+            <footer class="footer_admin"></footer>
+        </div>
+        <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+    <!-- <script>
+    
+    </script> -->
+</body>
+
+</html>

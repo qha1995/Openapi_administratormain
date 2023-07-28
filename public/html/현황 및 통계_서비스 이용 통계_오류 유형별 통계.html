@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../css/fontset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav class="gnb_left"></nav>
+      <div class="wrap_contents">
+        <div class="status_bar"></div>
+        <div class="contents">
+          <!-- page content start  -->
+          <div class="wrap_breadcrumb">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs_item">
+                <a href="javascript:;">시스템 관리</a>
+              </li>
+              <li class="breadcrumbs_item">
+                <a href="javascript:;">오류 유형별 통계</a>
+              </li>
+              <li class="breadcrumbs_item">
+                <a href="javascript:;">오류 유형별 통계</a>
+              </li>
+            </ul>
+          </div>
+          <h2 class="page_title">오류 유형별 통계</h2>
+          <div class="page_content">
+            <div class="search_bar">
+              <!-- <span class="search_label">회원구분</span>
+                        <select class="search_select">
+                            <option value="">운영기관</option>
+                            <option value="">이용기관</option>
+                            <option value="">제공기관</option>
+                        </select> -->
+
+              <span class="search_label">기간 구분 :</span>
+              <select class="search_select">
+                <option value="">기간별</option>
+                <option value="">월별</option>
+                <option value="">일별</option>
+              </select>
+
+              <div class="box_datepicker">
+                <input type="text" id="dateStart" class="" placeholder="YYYY-MM-DD" />
+                <img class="date_icon" src="../../public/img/icons/icon_date.png" alt="" />
+              </div>
+              <span class="search_label">~</span>
+              <div class="box_datepicker">
+                <div class="box_datepicker">
+                  <input type="text" id="dateStart" class="" placeholder="YYYY-MM-DD" />
+                  <img class="date_icon" src="../../public/img/icons/icon_date.png" alt="" />
+                </div>
+              </div>
+
+              <div class="box_search_combo">
+                <span class="search_label margin30">오류 유형 :</span>
+                <select class="search_select">
+                  <option value="">전체</option>
+                </select>
+
+                <button class="search_combo_btn btn_search margin30">검색</button>
+                <button class="search_combo_btn btn_search" aria-label="초기화 버튼">초기화</button>
+              </div>
+            </div>
+
+            <!-- table -->
+            <div class="wrap_table flex_center mt3 mb3">
+              <table class="table table_list">
+                <caption>공관리자 메뉴 - Board List</caption>
+                <colgroup>
+                  <col style="width: auto" />
+                  <col style="width: auto" />
+                  <col style="width: auto" />
+                  <col style="width: auto" />
+                  <col style="width: auto" />
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr class="bl">
+                    <th class="bg_555" scope="col">전체</th>
+                    <th scope="col">인증오류</th>
+                    <th scope="col">암·복호화 오류</th>
+                    <th scope="col">송·수신 오류</th>
+                    <th scope="col">서버 오류</th>
+                    <th scope="col"></th>
+                    <th scope="row"></th>
+                  </tr>
+                  <tr>
+                    <th scope="col" colspan="5">오류 유형별 통계 그래프</th>
+                    <th scope="row"></th>
+
+                    <th scope="col">(단위 : 건)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <div class="">
+                    <div class="graph_50">1</div>
+                    <div class="graph_60">2</div>
+                    <div class="graph_70">3</div>
+                    <div class="graph_80">4</div>
+                    <div class="graph_90">5</div>
+                  </div>
+                  <tr>
+                    <td>2022-12-12</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>150</td>
+                  </tr>
+                  <tr>
+                    <td>2022-12-11</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>100</td>
+                  </tr>
+                  <tr>
+                    <td>2022-12-10</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>120</td>
+                  </tr>
+                  <tr>
+                    <td>2022-12-09</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>100</td>
+                  </tr>
+                  <tr>
+                    <td>2022-12-08</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>140</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- table end -->
+          </div>
+          <!-- pagenation -->
+          <div class="wrap_pagenation mt3 mb3">
+            <ul class="pagenation">
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+              <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+            </ul>
+          </div>
+          <!-- pagenation end -->
+          <!-- page content end -->
+        </div>
+        <!-- contents end -->
+
+        <footer class="footer_admin"></footer>
+      </div>
+      <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+  </body>
+</html>

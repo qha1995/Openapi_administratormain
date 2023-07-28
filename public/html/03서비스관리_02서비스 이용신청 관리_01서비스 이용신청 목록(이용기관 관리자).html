@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공공서비스 개방 플랫폼 관리자</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/fontset.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- JS -->
+  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+  <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/app.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="gnb_left"></nav>
+    <div class="wrap_contents">
+      <div class="status_bar"></div>
+      <div class="contents">
+        <!-- page content start  -->
+        <div class="wrap_breadcrumb">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">시스템 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">서비스 이용신청 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">서비스 이용신청 목록</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="page_title">서비스 이용신청 목록</h2>
+        <div class="page_content">
+          <div class="search_bar">
+            <span class="search_label">신청 구분</span>
+            <select class="search_select">
+              <option value="">전체</option>
+              <option value="">신규</option>
+              <option value="">임시KEY재발급</option>
+              <option value="">반려</option>
+            </select>
+            <span class="search_label">신청 상태</span>
+            <select class="search_select">
+              <option value="">전체</option>
+              <option value="">대기</option>
+              <option value="">승인</option>
+              <option value="">반려</option>
+            </select>
+            <div class="box_search_combo">
+              <span class="search_label">신청자</span>
+              <input type="text" placeholder="검색어를 입력해 주세요." value="" class="search_combo_input" />
+              <button class="search_combo_btn btn_search">검색</button>
+            </div>
+          </div>
+          <div class="wrap_btns_top">
+            <a class="btn_submit filled_blue md" href="03서비스관리_02서비스 이용신청 관리_04서비스 이용신청 등록.html">신청</a>
+          </div>
+          <!-- table -->
+          <div class="wrap_table">
+            <table class="table table_list border_none">
+              <caption>회원 목록</caption>
+              <colgroup>
+                <col style="width: 90px" />
+                <col style="width: auto" />
+                <col style="width: auto" />
+                <col style="width: auto" />
+                <col style="width: auto" />
+                <col style="width: auto" />
+                <col style="width: 90px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">이용기관 명</th>
+                  <th scope="col">신청 구분</th>
+                  <th scope="col">신청자</th>
+                  <th scope="col">신청일자</th>
+                  <th scope="col">승인일자</th>
+                  <th scope="col">신청 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr onClick="location.href='../html/01시스템관리_04회원관리_03회원 등록.html'">
+                  <td>1</td>
+                  <td>네이버</td>
+                  <td>임시KEY재발급</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+                  <td>2022-11-24</td>
+                  <td>
+                    <span class="badge filled">승인</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>네이버</td>
+                  <td>임시KEY재발급</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+                  <td>-</td>
+                  <td>
+                    <span class="badge lined">신청</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>네이버</td>
+                  <td>임시KEY재발급</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+                  <td>2022-11-24</td>
+                  <td>
+                    <span class="badge gray">반려</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>네이버</td>
+                  <td>임시KEY재발급</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+                  <td>-</td>
+                  <td>
+                    <span class="badge lined">신청</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>네이버</td>
+                  <td>신규</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+
+                  <td>-</td>
+                  <td>
+                    <span class="badge lined">신청</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>6</td>
+                  <td>네이버</td>
+                  <td>신규</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+                  <td>-</td>
+                  <td>
+                    <span class="badge lined">신청</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>네이버</td>
+                  <td>신규</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+                  <td>-</td>
+                  <td>
+                    <span class="badge lined">신청</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>네이버</td>
+                  <td>신규</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+                  <td>2022-11-24</td>
+                  <td>
+                    <span class="badge filled">승인</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>9</td>
+                  <td>네이버</td>
+                  <td>신규</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+                  <td>2022-11-24</td>
+                  <td>
+                    <span class="badge filled">승인</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>10</td>
+                  <td>네이버</td>
+                  <td>신규</td>
+                  <td>김민철</td>
+                  <td>2022-11-24</td>
+                  <td>2022-11-24</td>
+                  <td>
+                    <span class="badge filled">승인</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- table end -->
+        </div>
+        <!-- page content end -->
+
+        <!-- pagenation -->
+        <div class="wrap_pagenation">
+          <ul class="pagenation">
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+          </ul>
+        </div>
+        <!-- pagenation end -->
+      </div>
+      <!-- contents end -->
+      <footer class="footer_admin"></footer>
+    </div>
+    <!-- wrap_contents end -->
+  </div>
+  <!-- wrapper end -->
+</body>
+
+</html>

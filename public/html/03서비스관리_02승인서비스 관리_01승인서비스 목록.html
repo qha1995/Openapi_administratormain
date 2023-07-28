@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공공서비스 개방 플랫폼 관리자</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/fontset.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- JS -->
+  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+  <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/app.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="gnb_left"></nav>
+    <div class="wrap_contents">
+      <div class="status_bar"></div>
+      <div class="contents">
+        <!-- page content start  -->
+        <div class="wrap_breadcrumb">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">고객센터 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">서비스 개선 요청 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">승인 서비스 목록</a>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="page_title">승인 서비스 목록</h2>
+        <div class="page_content">
+          <div class="search_bar">
+            <span class="search_label">이용기관 명</span>
+            <select class="search_select">
+              <option value="">전체</option>
+              <option value="">네이버</option>
+              <option value="">카카오</option>
+              <option value="">기타</option>
+            </select>
+
+            <span class="search_label">서비스 명</span>
+            <select class="search_select">
+              <option value="">SRT 승차권 예약</option>
+              <option value="">공항내 소요시간 안내</option>
+              <option value="">문화누리카드 발급신청 및 이용</option>
+              <option value="">자동차검사 예약</option>
+              <option value="">휴양림 예약</option>
+              <option value="">광릉수목원 예약</option>
+              <option value="">세종·백두대간수목원 예약</option>
+            </select>
+
+            <div class="box_search_combo">
+              <select class="search_select">
+                <option value="">--선택하세요--</option>
+                <option value="">번호</option>
+                <option value="">이용기관 명</option>
+                <option value="">서비스 명</option>
+                <option value="">공모구분</option>
+                <option value="">서비스이용약관버전</option>
+                <option value="">신청일자</option>
+                <option value="">신청상태</option>
+              </select>
+              <input type="text" placeholder="검색어를 입력해 주세요." value="" class="search_combo_input" />
+              <button class="search_combo_btn btn_search">검색</button>
+            </div>
+          </div>
+          <div class="wrap_btns_top">
+            <a href="03서비스관리_02승인서비스 관리_01승인서비스 등록.html" target="_self" class="btn_inline add">등록</a>
+          </div>
+
+          <!-- table -->
+          <div class="wrap_table">
+            <table class="table table_list">
+              <caption>승인 서비스 목록</caption>
+              <colgroup>
+                <col style="width: 90px" />
+                <col style="width: 160px" />
+                <col style="width: auto; min-width: 250px;" />
+                <col style="width: 160px" />
+                <col style="width: 160px" />
+                <col style="width: 160px" />
+                <col style="width: 160px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">이용기관 명</th>
+                  <th scope="col">서비스 명</th>
+                  <th scope="col">공모구분</th>
+                  <th scope="col">서비스이용약관버전</th>
+                  <th scope="col">신청일자</th>
+                  <th scope="col">신청상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr onClick="location.href='../html/03서비스관리_02승인서비스 관리_01승인서비스 상세.html';">
+                  <td>1</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청 문화누리카드 발급신청 문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.0</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청 문화누리카드 발급신청 문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.0</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청 문화누리카드 발급신청 문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.0</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청 문화누리카드 발급신청 문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.0</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.0</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청 문화누리카드 발급신청 문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.1</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청 문화누리카드 발급신청 문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.0</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청 문화누리카드 발급신청 문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.11</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청 문화누리카드 발급신청 문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.0</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>네이버</td>
+                  <td class="text_left">문화누리카드 발급신청 문화누리카드 발급신청 문화누리카드 발급신청</td>
+                  <td>정규 1차(22년)</td>
+                  <td>1.1</td>
+                  <td>2022-10-25</td>
+                  <td>이용승인</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- table end -->
+        </div>
+        <!-- page content end -->
+        <!-- pagenation -->
+        <div class="wrap_pagenation">
+          <ul class="pagenation">
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+          </ul>
+        </div>
+        <!-- pagenation end -->
+      </div>
+      <!-- contents end -->
+
+      <footer class="footer_admin"></footer>
+    </div>
+    <!-- wrap_contents end -->
+  </div>
+  <!-- wrapper end -->
+
+  <!-- <script>
+			$(window).ready(function () {
+		
+			})
+		</script> -->
+</body>
+
+</html>

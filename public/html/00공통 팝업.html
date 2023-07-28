@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../css/fontset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav class="gnb_left"></nav>
+      <div class="wrap_contents">
+        <div class="status_bar"></div>
+        <div class="contents">
+          <!-- page content start  -->
+          <h2 class="page_title">시스템 공통 팝업</h2>
+          <div class="page_content">
+            <div class="wrap_btns">
+              <!-- 신청, 등록  페이지  -->
+              <p>신청, 등록 페이지</p>
+              <button type="submit" class="btn_submit filled_gray" onclick="openPop('layer','popCancelChck'); return false;">취소</button>
+              <button type="submit" class="btn_submit filled_blue" onclick="openPop('layer','popApplyChck'); return false;">신청</button>
+              <button type="submit" class="btn_submit filled_blue" onclick="openPop('layer','popRegistComplete'); return false;">등록</button>
+
+              <!-- 수정 페이지  -->
+              <p>수정 페이지</p>
+              <button type="submit" class="btn_submit filled_blue" onclick="openPop('layer','popModifyCancelChck'); return false;">확인</button>
+              <button type="submit" class="btn_submit filled_gray" onclick="openPop('layer','popModifyCancelChck'); return false;">취소</button>
+
+              <!-- 기타 -->
+              <p>삭제</p>
+              <button type="button" class="btn_submit lined_blue" onclick="openPop('layer','popDelChck'); return false;">삭제</button>
+
+              <!--  필수 입력값 검증   -->
+              <p>필수 입력폼이 누락/요건 미충족 되었는데 ‘저장‘, ‘등록’ 버튼 클릭 시</p>
+              <button type="submit" class="btn_submit filled_blue" onclick="openPop('layer','popInputChck'); return false;">저장,등록</button>
+            </div>
+          </div>
+          <!-- page content end -->
+        </div>
+        <!-- contents end -->
+
+        <footer class="footer_admin"></footer>
+      </div>
+      <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- popup -->
+    <div class="mask"></div>
+
+    <!-- 등록페이지 - 입력 중 ‘취소’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popCancelChck">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popCancelChck'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">현재까지 입력한 항목들이</p>
+        <p class="note_info">전부 삭제됩니다. 계속하시겠습니까?</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue md" onclick="closePop('layer','popCancelChck'); return false;">확인</button>
+        <button type="submit" class="btn_submit filled_gray md" onclick="closePop('layer','popCancelChck'); return false;">취소</button>
+      </div>
+    </div>
+    <!-- 등록페이지 - 입력 중 ‘취소’ 버튼 클릭 시 팝업 end -->
+
+    <!--  등록페이지 - ‘등록’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popRegistComplete">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popRegistComplete'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">등록되었습니다.</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue" onclick="closePop('layer','popRegistComplete'); return false;">확인</button>
+      </div>
+    </div>
+    <!--  등록페이지 - ‘등록’ 버튼 클릭 시 팝업 end -->
+
+    <!-- ‘신청’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popApplyChck">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popApplyChck'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">서비스를 신청하시겠습니까?</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue md" onclick="openPop('layer','popApplyComplete'); return false;">확인</button>
+        <button type="submit" class="btn_submit filled_gray md" onclick="closePop('layer','popApplyChck'); return false;">취소</button>
+      </div>
+    </div>
+    <!-- ‘신청’ 버튼 클릭 시 팝업 end -->
+
+    <!-- ‘신청’ -> ‘확인’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popApplyComplete">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popApplyComplete'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">신청되었습니다.</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue" onclick="closePop('layer','popApplyComplete'); return false;">확인</button>
+      </div>
+    </div>
+    <!-- ‘신청’ -> ‘확인’ 버튼 클릭 시 팝업 end -->
+
+    <!-- 수정페이지 ‘취소’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popModifyCancelChck">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popModifyCancelChck'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">변경 사항이 저장되지 않습니다.</p>
+        <p class="note_info">계속하시겠습니까?</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue md" onclick="closePop('layer','popModifyCancelChck'); return false;">확인</button>
+        <button type="submit" class="btn_submit filled_gray md" onclick="closePop('layer','popModifyCancelChck'); return false;">취소</button>
+      </div>
+    </div>
+    <!-- 수정페이지 ‘취소’ 버튼 클릭 시 팝업 end -->
+
+    <!-- 수정페이지 ‘저장’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popModifyComplete">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popModifyComplete'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">변경사항이 저장되었습니다.</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue" onclick="closePop('layer','popModifyComplete'); return false;">확인</button>
+      </div>
+    </div>
+    <!-- 수정페이지 ‘저장’ 버튼 클릭 시 팝업 end -->
+
+    <!-- ‘삭제’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popDelChck">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popDelChck'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">정말 삭제하시겠습니까?</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue md" onclick="openPop('layer','popDelComplete'); return false;">확인</button>
+        <button type="submit" class="btn_submit filled_gray md" onclick="closePop('layer','popDelChck'); return false;">취소</button>
+      </div>
+    </div>
+    <!-- ‘삭제’ 버튼 클릭 시 팝업 end -->
+
+    <!-- ‘삭제’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popDelComplete">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popDelComplete'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">삭제되었습니다.</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue" onclick="closePop('layer','popDelComplete'); return false;">확인</button>
+      </div>
+    </div>
+    <!-- ‘삭제’ 버튼 클릭 시 팝업 end -->
+
+    <!--  필수 입력값 검증 팝업  -->
+    <div class="popup_layer pop_sm" id="popInputChck">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popInputChck'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">
+          <span class="color_red">항목</span>을(를) 입력해주세요.
+        </p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue" onclick="closePop('layer','popInputChck'); return false;">확인</button>
+      </div>
+    </div>
+    <!--  필수 입력값 검증 팝업 end -->
+  </body>
+</html>

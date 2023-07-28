@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="gnb_left"></nav>
+        <div class="wrap_contents">
+
+            <div class="status_bar"></div>
+            <div class="contents">
+                <!-- page content start  -->
+                <div class="wrap_breadcrumb">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs_item"><a href="javascript:;">시스템 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">배치 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">배치 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">배치 목록</a></li>
+                    </ul>
+                </div>
+                <h2 class="page_title">배치 목록</h2>
+                <div class="page_content">
+                    <div class="search_bar">
+                        <span class="search_label">실행 주기</span>
+                        <select class="search_select">
+                            <option value="">전체</option>
+                            <option value="">한번만</option>
+                            <option value="">매주</option>
+                            <option value="">매월</option>
+                        </select>
+                        <div class="box_search_combo">
+                            <span class="search_label">배치 프로그램</span>
+                            <select class="search_select">
+                                <option value="">--선택하세요--</option>
+                                <option value="">배치 스케줄 ID</option>
+                                <option value="">배치 작업 ID</option>
+                                <option value="">배치 프로그램</option>
+                                <option value="">실행 스케줄</option>
+                            </select>
+                            <input type="text" placeholder="검색어를 입력해 주세요." value="" class="search_combo_input">
+                            <button class="search_combo_btn btn_search">검색</button>
+                        </div>
+                    </div>
+                    <div class="wrap_btns_top">
+                        <a class="btn_inline add" href="01시스템관리_05배치관리_01배치관리_03배치 등록.html">등록</a>
+                    </div>
+                    <!-- table -->
+                    <div class="wrap_table">
+                        <table class="table table_list">
+                            <caption>배치 목록</caption>
+                            <colgroup>
+                                <col style="width:90px;">
+                                <col style="width:auto; min-width: 195px;">
+                                <col style="width:auto; min-width: 195px;">
+                                <col style="width:auto; min-width: 195px;">
+                                <col style="width:140px;">
+                                <col style="width:215px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">배치 스케줄 ID</th>
+                                    <th scope="col">배치 작업 ID</th>
+                                    <th scope="col">배치 프로그램</th>
+                                    <th scope="col">실행 주기</th>
+                                    <th scope="col">실행 스케줄</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onClick="location.href='#none';">
+                                    <td>1</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>매월</td>
+                                    <td>22일 19:00:00</td>
+                                </tr>
+                                <tr onClick="location.href='#none';">
+                                    <td>2</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>매월</td>
+                                    <td>22일 19:00:00</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>매주</td>
+                                    <td>월수금 12:30:00</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>한번만</td>
+                                    <td>2022-10-12 12:30:00</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>매주</td>
+                                    <td>월수금 12:30:00</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>매주</td>
+                                    <td>월수금 12:30:00</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>매월</td>
+                                    <td>22일 19:00:00</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>한번만</td>
+                                    <td>2022-10-12 12:30:00</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>매주</td>
+                                    <td>월수금 12:30:00</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>BSC00000000002</td>
+                                    <td>BAT00000000001</td>
+                                    <td>D:/TEMP/run.bat</td>
+                                    <td>한번만</td>
+                                    <td>2022-10-12 12:30:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- table end -->
+                </div>
+                <!-- page content end -->
+                <!-- pagenation -->
+                <div class="wrap_pagenation">
+                    <ul class="pagenation">
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+                        </ul>
+                </div>
+                <!-- pagenation end -->
+            </div>
+            <!-- contents end -->
+
+            <footer class="footer_admin"></footer>
+        </div>
+        <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- <script>
+        $(window).ready(function () {
+    
+        })
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="gnb_left"></nav>
+        <div class="wrap_contents">
+
+            <div class="status_bar"></div>
+            <div class="contents">
+                <!-- page content start  -->
+                <div class="wrap_breadcrumb">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs_item"><a href="javascript:;">고객센터 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">공지사항 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">공지사항 등록</a></li>
+                    </ul>
+                </div>
+                <h2 class="page_title">공지사항 등록</h2>
+                <div class="page_content">
+                    <!-- table -->
+                    <div class="wrap_table">
+                        <table class="table table_row">
+                            <caption>공지사항 등록</caption>
+                            <colgroup>
+                                <col style="width:180px;">
+                                
+                                <col style="width:auto;">
+                                <col style="width:180px;">
+                                <col style="width:auto;">
+                                
+                            </colgroup>
+                            <tbody>
+                                <th scope="row">
+                                    <p class="asterisk">제목</p>
+                                </th>
+                                <td colspan="3">
+                                    <div class="box_search">
+                                        <input type="text" placeholder="제목을 입력해주세요.">
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">공지 기간</p>
+                                    </th>
+                                    <td>
+                                        <div class="wrap_radio">
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd01" name="rdo_group01">
+                                                <label for="rd01" class="label_txt">직접 입력</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd02" name="rdo_group01">
+                                                <label for="rd02" class="label_txt">영구 게시</label>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">공개 여부 설정</p>
+                                    </th>
+                                    <td>
+                                        <div class="wrap_radio">
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd03" name="rdo_group02">
+                                                <label for="rd03" class="label_txt">공개</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd04" name="rdo_group02">
+                                                <label for="rd04" class="label_txt">비공개</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th scope="row">
+                                        <p>공지 고정 여부</p>
+                                    </th>
+                                    <td>
+                                        <div class="wrap_check">
+                                            <div class="box_checkbox">
+                                                <input type="checkbox" class="checkbox" id="ch10" name="ch_group1" checked="checked">
+                                                <label for="ch01" class="label_txt">게시판 최상단에 고정</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">공지 대상</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="box_select">
+                                            <select class="search_select">
+                                                <option value="">전체</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p>작성자</p>
+                                    </th>
+                                    <td>
+                                        <div class="box_search">
+                                            <input type="text" placeholder="작성자를 입력해주세요." value="관리자" readonly>
+                                        </div>
+                                    </td>
+                                    <th scope="row">
+                                        <p>작성일</p>
+                                    </th>
+                                    <td>
+                                        <div class="box_search">
+                                            <input type="text" placeholder="작성일을 입력해주세요." value="" readonly>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        <p>내용</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="wrap_textarea">
+                                            <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" rowspan="2">
+                                        <p>첨부파일</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="box_attached_file">
+                                            <label class="btn_upload btn_inline lined" for="file_num01">파일선택</label>
+                                            <input type="file" id="file_num01" class="attached_file">
+                                            <p class="attached_note">※ 첨부 파일 사이즈는 10MB 이내로 등록 가능합니다.</p>
+                                            <p class="attached_file_counter">(<span class="attachedCount">2</span>/10)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- page content end -->
+                <!-- wrap_btns -->
+                <div class="wrap_btns">
+                    <a href="javascript:;" target="_self" class="btn_submit filled_gray">취소</a>
+                    <a href="javascript:;" target="_self" class="btn_submit filled_blue">저장</a>
+                </div>
+                <!-- wrap_btns end -->
+            </div>
+            <!-- contents end -->
+
+            <footer class="footer_admin"></footer>
+        </div>
+        <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+
+    <script>
+        $(window).ready(function() {
+
+            /**  파일 첨부 */
+            $('input[id="input-file"]').change(function() {
+                var files = $('input[id="input-file"]')[0].files;
+                $(this).parents().siblings(".attached_file_name").children().text(files[0].name);
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="gnb_left"></nav>
+        <div class="wrap_contents">
+
+            <div class="status_bar"></div>
+            <div class="contents">
+                <!-- page content start  -->
+                <div class="wrap_breadcrumb">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs_item"><a href="javascript:;">시스템 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">팝업 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">팝업 목록</a></li>
+                    </ul>
+                </div>
+                <h2 class="page_title">팝업 목록</h2>
+                <div class="page_content">
+                    <div class="search_bar">
+                        <span class="search_label">게시 상태</span>
+                        <select class="search_select">
+                            <option value="">전체</option>
+                            <option value="">YES</option>
+                            <option value="">NO</option>
+                        </select>
+                        <div class="box_search_combo">
+                            <span class="search_label">팝업창 제목</span>
+                            <input type="text" placeholder="검색어를 입력해 주세요." value="" class="search_combo_input">
+                            <button class="search_combo_btn btn_search">검색</button>
+                        </div>
+                    </div>
+                    <div class="wrap_btns_top">
+                        <a class="btn_inline view" onclick="openPop('layer','popPreview'); return false;">미리보기</ㅠ>
+                            <a class="btn_inline add" href="01시스템관리_06팝업관리_04팝업 등록.html">등록</a>
+                    </div>
+                    <!-- table -->
+                    <div class="wrap_table">
+                        <table class="table table_list">
+                            <caption>팝업 목록</caption>
+                            <colgroup>
+                                <col style="width:80px;">
+                                <col style="width:auto; min-width: 240px;">
+                                <col style="width:auto; min-width: 200px;">
+                                <col style="width:auto; min-width: 310px;">
+                                <col style="width:140px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">팝업창 제목</th>
+                                    <th scope="col">게시 기간</th>
+                                    <th scope="col">이동 링크 URL</th>
+                                    <th scope="col">게시 상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onClick="location.href='../html/01시스템관리_06팝업관리_04팝업 등록.html';">
+                                    <td>1</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>회원 등록 약관 변경 공지 팝업창</td>
+                                    <td>2022-10-24 12:30:00 ~ 2022-10-24 12:30:00</td>
+                                    <td>/egovframeworkc/com/uss/ion/pwm/sample/EgovPopupSample</td>
+                                    <td>YES</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- table end -->
+                </div>
+                <!-- page content end -->
+                <!-- pagenation -->
+                <div class="wrap_pagenation">
+                    <ul class="pagenation">
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+                        </ul>
+                </div>
+                <!-- pagenation end -->
+            </div>
+            <!-- contents end -->
+
+            <footer class="footer_admin"></footer>
+        </div>
+        <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- popup_layer pop_lg-->
+    <div class="popup_layer pop_lg popup_preview" id="popPreview">
+        <div class="pop_title">
+            <h3>팝업 미리보기</h3>
+            <button type="button" class="popup_close" onclick="closePop('layer','popPreview'); return false;"></button>
+        </div>
+        <div class="inner">
+            <div style="width: 100%; height: 300px; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center;">
+                <p>신규 API 등록 안내 팝업창 테스트</p>
+            </div>
+            <div class="box_checkbox">
+                <input type="checkbox" class="checkbox" id="ch10" name="ch_group10">
+                <label for="ch10" class="label_txt">다음부터 이 창을 열지 않음</label>
+            </div>
+        </div>
+        <!-- <div class="wrap_btns"> -->
+        <!-- </div> -->
+    </div>
+    <div class="mask"></div>
+    <!-- popup_layer pop_lg end -->
+
+    <script>
+        // $(window).ready(function () {
+
+        // })
+
+        $(document).on("click", ".mask", function() {
+            closePop();
+        });
+
+        function openPop(type, id) {
+            $("#" + id).addClass("open");
+
+            if (type == "layer") {
+                $(".popup_layer").fadeOut();
+                $("#" + id).fadeIn();
+            }
+            $(".mask").fadeIn();
+
+            $("body").css({
+                overflow: "hidden",
+            });
+        }
+
+
+        function closePop(id) {
+            $("#" + id).removeClass("open");
+            $(".popup_layer").fadeOut();
+            $(".mask").fadeOut();
+
+            $("body").css({
+                overflow: "unset",
+            });
+        }
+    </script>
+
+</body>
+
+</html>

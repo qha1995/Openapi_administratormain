@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공공서비스 개방 플랫폼 관리자</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/fontset.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- JS -->
+  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+  <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/app.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="gnb_left"></nav>
+    <div class="wrap_contents">
+      <div class="status_bar"></div>
+      <div class="contents">
+
+        <div class="wrap_breadcrumb">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">서비스 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">API 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">API 정보 등록</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="page_title">API 정보 등록</h2>
+        <!-- page content -->
+        <div class="page_content">
+
+          <h3 class="table_title">API 상세 정보</h3>
+          <div class="wrap_table">
+            <table class="table table_row text_start border_none">
+              <caption>API 상세 정보</caption>
+              <colgroup>
+                <col style="width:180px;">
+                <col style="width:auto;">
+                <col style="width:180px;">
+                <col style="width:auto;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <p class="asterisk">제공기관 명</p>
+                  </th>
+                  <td colspan="1">
+                    <div class="box_select width_100">
+                      <select class="search_select width_100 ">
+                        <option value="">--선택하세요.--</option>
+                        <option value="">제공기관 명</option>
+                        <option value="">서비스 명</option>
+                        <option value="">API 명</option>
+                        <option value="">API 설명</option>
+                        <option value="">API 유형</option>
+                        <option value="">데이터 포맷</option>
+                        <option value="">신청가능 트래픽</option>
+                        <option value="">API 버전</option>
+                        <option value="">API URL</option>
+                        <option value="">사용 여부</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th scope="row">
+                    <p class="asterisk">서비스 명</p>
+                  </th>
+                  <td colspan="1">
+                    <div class="wrap_check">
+                      <div class="box_select width_100">
+                        <select class="search_select width_100 ">
+                          <option value="">--선택하세요.--</option>
+                          <option value="">서비스 명</option>
+                          <option value="">서비스 명02</option>
+                          <option value="">서비스 명03</option>
+                          <option value="">서비스 명04</option>
+                        </select>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <th scope="row">
+                  <p class="asterisk">API 명</p>
+                </th>
+                <td colspan="3">
+                  <div class="box_select width_100">
+                    <input type="text" placeholder="API 명을 입력하세요." value="">
+                  </div>
+                </td>
+                <tr>
+                  <th scope="row">
+                    <p class="rowspan asterisk">API 설명</p>
+                  </th>
+                  <td colspan="3">
+                    <div class="box_select width_100">
+                      <input type="text" placeholder="API 설명을 입력하세요." value="">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <p class="asterisk">API 유형</p>
+                  </th>
+                  <td  colspan="1">
+                    <select class="search_select width_100 ">
+                      <option value="" selected>REST</option>
+                      <option value="">GraphQL</option>
+                      <option value="">RPC</option>
+                      <option value="">기타</option>
+                    </select>
+                  </td>
+                  <th scope="row">
+                    <p class="asterisk">데이터 포맷</p>
+                  </th>
+                  <td  colspan="1"> <select class="search_select width_100 ">
+                      <option value="" selected>JSON</option>
+                      <option value="">XML</option>
+                      <option value="">JSON + XML</option>
+                      <option value="">SOAP</option>
+                      <option value="">YAML</option>
+                      <option value="">기타</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <p class="asterisk">신청가능 트래픽</p>
+                  </th>
+                  <td colspan="3" class="wrap_input_number">
+                    <div class="box_input_number">
+                      <p>개발계정 :</p>
+                      <input type="number" placeholder="숫자만 입력" value="">
+                  </div>
+                    <div class="box_input_number">
+                      <p>운영계정 :</p>
+                      <input type="number" placeholder="숫자만 입력" value="">
+                  </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <p class="rowspan asterisk">API 버전</p>
+                  </th>
+                  <td colspan="3">
+                    <input type="text" placeholder="API 버전을 입력하세요. " value="">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <p class="rowspan asterisk">API URL</p>
+                  </th>
+                  <td colspan="3">
+                    <input type="text" placeholder="API URL을 입력하세요. " value="">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <p class="rowspan asterisk">사용 여부</p>
+                  </th>
+                  <td colspan="">
+                    <div class="wrap_radio">
+                      <div class="box_radio">
+                        <input type="radio" class="rdobtn" id="rd03" name="rdo_group02" />
+                        <label for="rd03" class="label_txt">YES</label>
+                      </div>
+                      <div class="box_radio">
+                        <input type="radio" class="rdobtn" id="rd04" name="rdo_group02" />
+                        <label for="rd04" class="label_txt">NO</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <h3 class="table_title">요청 메시지 명세</h3>
+            <div class="button_table_action">
+              <a href="javascript:;" target="_self" class="btn_submit lined_blue small">삭제</a>
+              <a href="javascript:;" target="_self" class="btn_submit filled_blue small">칸 추가</a>
+              <a href="javascript:;" target="_self" class="btn_submit filled_blue small">일괄 등록</a>
+            </div>
+            <table class="table table_list">
+              <caption>요청 메시지 명세</caption>
+              <colgroup>
+                <col style="width: 70px" />
+                <col style="width: auto" />
+                <col style="width: auto" />
+                <col style="width: auto" />
+                <col style="width: auto" />
+                <col style="width: 180px" />
+                <col style="width: auto" />
+                <col style="width: auto" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">HTTP</th>
+                  <th scope="col">항목 명(영문)</th>
+                  <th scope="col">항목 명(국문)</th>
+                  <th scope="col">값</th>
+                  <th scope="col">필수여부</th>
+                  <th scope="col">TYPE(크기)</th>
+                  <th scope="col">항목 설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="wrap_check">
+                        <div class="box_checkbox">
+                            <input type="checkbox" class="checkbox" id="ch01" name="ch_group01">
+                            <label for="ch01" class="label_txt"></label>
+                        </div>
+                      </div>         
+                  </td>
+                  <td  class="rl ">
+                    <div class="box_select width_100">
+                      <select class="search_select width_100 ">
+                        <option value="">Header</option>
+                        <option value="">Parameter</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                  <td>
+                    <div class="wrap_radio">
+                      <div class="box_radio">
+                        <input type="radio" class="rdobtn" id="rd05" name="rdo_group04" />
+                        <label for="rd05" class="label_txt">Y</label>
+                      </div>
+                      <div class="box_radio">
+                        <input type="radio" class="rdobtn" id="rd06" name="rdo_group04" />
+                        <label for="rd06" class="label_txt">N</label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="table_title">응답메시지 명세</h3>
+            <div class="button_table_action">
+              <a href="javascript:;" target="_self" class="btn_submit lined_blue small">삭제</a>
+              <a href="javascript:;" target="_self" class="btn_submit filled_blue small">칸 추가</a>
+              <a href="javascript:;" target="_self" class="btn_submit filled_blue small">일괄 등록</a>
+            </div>
+          <table class="table table_list ">
+            <caption>응답 메시지 명세</caption>
+            <colgroup>
+              <col style="width: 70px" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: 180px" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">HTTP</th>
+                  <th scope="col">항목 명(영문)</th>
+                  <th scope="col">항목 명(국문)</th>
+                  <th scope="col">값</th>
+                  <th scope="col">필수여부</th>
+                  <th scope="col">TYPE(크기)</th>
+                  <th scope="col">항목 설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="wrap_check">
+                        <div class="box_checkbox">
+                            <input type="checkbox" class="checkbox" id="ch01" name="ch_group01">
+                            <label for="ch01" class="label_txt"></label>
+                        </div>
+                      </div>         
+                  </td>
+                  <td  class="rl ">
+                    <div class="box_select width_100">
+                      <select class="search_select width_100 ">
+                        <option value="">Header</option>
+                        <option value="">Parameter</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                  <td>
+                    <div class="wrap_radio">
+                      <div class="box_radio">
+                        <input type="radio" class="rdobtn" id="rd08" name="rdo_group03" />
+                        <label for="rd08" class="label_txt">Y</label>
+                      </div>
+                      <div class="box_radio">
+                        <input type="radio" class="rdobtn" id="rd09" name="rdo_group03" />
+                        <label for="rd09" class="label_txt">N</label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                  <td>
+                    <input type="text" placeholder="" value="">
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+
+          <h3 class="table_title">응답 메시지 예시</h3>
+
+          <table class="table table_row no_rl">
+            <caption>응답 메시지 예시</caption>
+            <colgroup>
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <td colspan="1">
+                <textarea placeholder="응답 메시지 예시를 입력하세요."></textarea>
+              </td>
+            </tbody>
+          </table>
+
+            <div class="wrap_btns">
+              <button type="submit" class="btn_submit filled_gray" onclick="openPop('layer','popCancelChck'); return false;">취소</button>
+              <button type="submit" class="btn_submit filled_blue" onclick="openPop('layer','popRegistComplete'); return false;">등록</button>
+            </div>
+
+          </div>
+          </div>
+          <!-- contents end -->
+          <footer class="footer_admin"></footer>
+        </div>
+        <!-- wrap_contents end -->
+      </div>
+      <!-- wrapper end -->
+
+      
+    <!-- popup -->
+    <div class="mask"></div>
+
+    <!-- 등록페이지 - 입력 중 ‘취소’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popCancelChck">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popCancelChck'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">현재까지 입력한 항목들이</p>
+        <p class="note_info">전부 삭제됩니다. 계속하시겠습니까?</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue md" onclick="closePop('layer','popCancelChck'); return false;">확인</button>
+        <button type="submit" class="btn_submit filled_gray md" onclick="closePop('layer','popCancelChck'); return false;">취소</button>
+      </div>
+    </div>
+    <!-- 등록페이지 - 입력 중 ‘취소’ 버튼 클릭 시 팝업 end -->
+
+    <!--  등록페이지 - ‘등록’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popRegistComplete">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popRegistComplete'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">등록되었습니다.</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue" onclick="closePop('layer','popRegistComplete'); return false;">확인</button>
+      </div>
+    </div>
+    <!--  등록페이지 - ‘등록’ 버튼 클릭 시 팝업 end -->
+    
+</body>
+
+</html>

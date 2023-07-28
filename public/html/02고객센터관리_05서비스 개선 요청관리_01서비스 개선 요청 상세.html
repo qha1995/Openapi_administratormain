@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/smarteditor/js/HuskyEZCreator.js" charset="utf-8"></script>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="gnb_left"></nav>
+        <div class="wrap_contents">
+
+            <div class="status_bar"></div>
+            <div class="contents">
+                <!-- page content start  -->
+                <div class="wrap_breadcrumb">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs_item"><a href="javascript:;">고객센터 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">서비스 개선 요청 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">서비스 개선 요청 상세</a></li>
+                    </ul>
+                </div>
+                <h2 class="page_title">서비스 개선 요청 상세</h2>
+                <div class="page_content">
+                    <!-- table -->
+                    <div class="wrap_table">
+                        <table class="table table_row">
+                            <caption>서비스 개선 요청 상세</caption>
+                            <colgroup>
+                                <col style="width:180px;">
+                                <col style="width:auto;">
+                                <col style="width:180px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <p>분류</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <p>API</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p>제목</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <p>API 오류가 있습니다.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p>작성자</p>
+                                    </th>
+                                    <td>
+                                        <p>A기관 개발자</p>
+                                    </td>
+                                    <th scope="row">
+                                        <p>작성일</p>
+                                    </th>
+                                    <td>
+                                        <p>2022-03-12</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p>처리 상태</p>
+                                    </th>
+                                    <td>
+                                        <!-- <p class="color_red">미답변</p> -->
+                                        <p class="color_blue">답변</p>
+                                    </td>
+                                    <th scope="row">
+                                        <p>조회수</p>
+                                    </th>
+                                    <td>
+                                        <p>1431</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p>내용</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <pre class="result_textarea">
+진흥원에서 처리하는 개인정보는 보유기간으로 명시된 범위 내에서만 처리하며, 보유 목적 달성 및 보유기간 경과의 경우
+지체 없이 개인정보를 파기하고 있습니다. 진흥원이 운영하는 개인정보파일의 처리 및 보유기간은 개인정보파일 
+보유현황을 통해서 확인하실 수 있습니다. 또한, 진흥원 각 부서에서 운영하는 개인정보파일은
+'개인정보보호 종합지원포털'에서 안내하고 있습니다.</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p>첨부 파일</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="attached_file_viewer download">
+                                            <span class="attached_file_counter">첨부 파일 (<span class="attachedCount">1</span>건)</span>
+                                            <a class="attached_file_name btn_attached_download">개인정보 처리방침 안내.hwp (63kb)</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p>답변</p>
+                                    </th>
+                                    <td colspan="3">
+                                        <!-- <div class="wrap_textarea">
+                                            <textarea name="" id="" placeholder="답변을 등록해주세요." disabled>미답변 게시물입니다.</textarea>
+                                        </div> -->
+                                    <pre class="result_textarea disabled">미답변 게시물입니다.</pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- page content end -->
+                <!-- wrap_btns -->
+                <div class="wrap_btns">
+                    <a class="btn_submit lined_black" href="02고객센터관리_05서비스 개선 요청관리_02서비스 개선 요청 답변 수정.html">수정</a>
+                    <a href="javascript:;" target="_self" class="btn_submit lined_blue">삭제</a>
+                    <a href="javascript:;" target="_self" class="btn_submit filled_blue">목록</a>
+                </div>
+                <!-- wrap_btns end -->
+            </div>
+            <!-- contents end -->
+
+            <footer class="footer_admin"></footer>
+        </div>
+        <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+
+
+    <!-- <script>
+				$(document).ready(function() {
+		
+		
+				});
+		</script> -->
+</body>
+
+
+</html>

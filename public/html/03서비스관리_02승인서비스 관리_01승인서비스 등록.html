@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../css/fontset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <nav class="gnb_left"></nav>
+      <div class="wrap_contents">
+        <div class="status_bar"></div>
+        <div class="contents">
+          <!-- page content start  -->
+          <div class="wrap_breadcrumb">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs_item">
+                <a href="javascript:;">서비스 관리</a>
+              </li>
+              <li class="breadcrumbs_item">
+                <a href="javascript:;">기관 관리</a>
+              </li>
+              <li class="breadcrumbs_item">
+                <a href="javascript:;">승인 서비스 수정</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="page_content">
+            <!-- table -->
+            <h2 class="page_title">승인 서비스 수정</h2>
+            <h3 class="table_title">기관 이용승인 서비스 정보</h3>
+            <div class="wrap_table">
+              <table class="table table_row text_start no_rl">
+                <caption>기관 이용승인 서비스 정보</caption>
+                <colgroup>
+                  <col style="width: 180px" />
+                  <col style="width: auto" />
+                  <col style="width: 180px" />
+                  <col style="width: auto" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <p class="asterisk">기관 명</p>
+                    </th>
+                    <td class="flex gap10">
+                      <input type="text" placeholder="기관 명을 검색해 주세요" value="" />
+                      <button type="button" class="popup_close btn_inline sm" onclick="openPop('layer','popCoSearch'); return false;">기관 검색</button>
+                    </td>
+
+                    <th scope="row">
+                      <p class="asterisk">서비스 명</p>
+                    </th>
+                    <td class="flex gap10">
+                      <input type="text" placeholder="서비스 명을 검색해 주세요." value="" />
+                      <button type="button" class="popup_close btn_inline sm" onclick="openPop('layer','popServiceSearch'); return false;">서비스 검색</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <p class="asterisk">공모구분</p>
+                    </th>
+                    <td>
+                      <div class="box_select width_100">
+                        <select class="search_select width_100">
+                          <option value="">--선택하세요--</option>
+                          <option value="">정규1차(22년)</option>
+                          <option value="">정규2차(23년)</option>
+                          <option value="">정규3차(24년)</option>
+                          <option value="">기타</option>
+                        </select>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <p class="asterisk">서비스이용약관</p>
+                    </th>
+                    <td class="flex gap10">
+                      <input type="text" placeholder="서비스 약관을 검색해 주세요." value="" />
+                      <button type="button" class="btn_inline sm" onclick="openPop('layer','popTermsSearch'); return false;">약관 검색</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <p class="asterisk">신청상태</p>
+                    </th>
+                    <td>
+                      <div class="box_select width_100">
+                        <select class="search_select width_100">
+                          <option value="">--선택하세요--</option>
+                          <option value="">이용 승인</option>
+                          <option value="">이용 해제</option>
+                        </select>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <p class="asterisk">신청일자</p>
+                    </th>
+                    <td class="">
+                      <div class="box_datepicker">
+                        <input type="text" id="dateStart" class="datepicker" placeholder="YYYY-MM-DD" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <p class="">등록자</p>
+                    </th>
+                    <td>
+                      <p class="">홍길동</p>
+                    </td>
+                    <th scope="row">
+                      <p class="asterisk">등록일자</p>
+                    </th>
+                    <td>
+                      <p class="">2022-11-25</p>
+                    </td>
+                  </tr>
+                  <th scope="row">
+                    <p class="">비고</p>
+                  </th>
+                  <td colspan="3">
+                    <input type="text" placeholder="공모구분이 '수시' 일 경우 비고에 상세내용 기재" />
+                  </td>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="wrap_btns">
+            <button type="submit" class="btn_submit filled_gray" onclick="openPop('layer','popCancelChck'); return false;">취소</button>
+            <button type="submit" class="btn_submit filled_blue" onclick="openPop('layer','popRegistComplete'); return false;">등록</button>
+          </div>
+          <!-- page content end -->
+        </div>
+        <!-- contents end -->
+
+        <footer class="footer_admin"></footer>
+      </div>
+      <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- popup -->
+    <div class="mask"></div>
+
+    <!-- 등록페이지 - 입력 중 ‘취소’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popCancelChck">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popCancelChck'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">현재까지 입력한 항목들이</p>
+        <p class="note_info">전부 삭제됩니다. 계속하시겠습니까?</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue md" onclick="closePop('layer','popCancelChck'); return false;">확인</button>
+        <button type="submit" class="btn_submit filled_gray md" onclick="closePop('layer','popCancelChck'); return false;">취소</button>
+      </div>
+    </div>
+    <!-- 등록페이지 - 입력 중 ‘취소’ 버튼 클릭 시 팝업 end -->
+
+    <!--  등록페이지 - ‘등록’ 버튼 클릭 시 팝업 -->
+    <div class="popup_layer pop_sm" id="popRegistComplete">
+      <div class="pop_title">
+        <button type="button" class="popup_close" onclick="closePop('layer','popRegistComplete'); return false;"></button>
+      </div>
+      <div class="inner">
+        <p class="note_info">등록되었습니다.</p>
+      </div>
+      <div class="wrap_btns">
+        <button type="submit" class="btn_submit filled_blue" onclick="closePop('layer','popRegistComplete'); return false;">확인</button>
+      </div>
+    </div>
+    <!--  등록페이지 - ‘등록’ 버튼 클릭 시 팝업 end -->
+
+    <!-- 기관 검색 팝업 -->
+    <div class="popup_layer pop_lg popup_program" id="popCoSearch">
+      <div class="pop_title">
+        <h3>기관 검색</h3>
+        <button type="button" class="popup_close" onclick="closePop('layer','popCoSearch'); return false;"></button>
+      </div>
+      <div class="inner">
+        <div class="search_bar_pop">
+          <div class="box_select">
+            <select class="search_select">
+              <option value="">--선택하세요--</option>
+              <option value="">기관 명</option>
+              <option value="">대표자 명</option>
+            </select>
+          </div>
+          <div class="box_search">
+            <input type="text" placeholder="검색어를 입력해 주세요." value="" />
+            <button class="btn_search"></button>
+          </div>
+        </div>
+        <!-- table -->
+        <div class="wrap_table">
+          <table class="table table_list">
+            <caption>기관 목록</caption>
+            <colgroup>
+              <col style="width: 60px" />
+              <col style="width: auto" />
+              <col style="width: 160px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">기관 명</th>
+                <th scope="col">대표자 명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 검색 결과가 없을 때 result_search_none 클래스 추가 -->
+              <!-- <tr class="result_search_none">
+                                <td colspan="3">검색 결과가 없습니다.</td>
+                            </tr> -->
+              <tr onClick="location.href='#none';">
+                <td>1</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>2</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>3</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>4</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>5</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>6</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>7</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>8</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>9</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>10</td>
+                <td class="text_left">네이버</td>
+                <td>김길동</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- table end -->
+      </div>
+      <!-- pagenation -->
+      <div class="wrap_pagenation">
+        <ul class="pagenation">
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+        </ul>
+      </div>
+      <!-- pagenation end -->
+    </div>
+    <!-- 기관 검색 팝업 end -->
+
+    <!-- 약관 검색 팝업 -->
+    <div class="popup_layer pop_lg popup_program" id="popTermsSearch">
+      <div class="pop_title">
+        <h3>약관 검색</h3>
+        <button type="button" class="popup_close" onclick="closePop('layer','popTermsSearch'); return false;"></button>
+      </div>
+      <div class="inner">
+        <div class="search_bar_pop">
+          <span class="search_label">약관 구분</span>
+          <div class="box_select">
+            <select class="search_select">
+              <option value="">서비스</option>
+            </select>
+          </div>
+          <div class="box_search">
+            <input type="text" placeholder="검색어를 입력해 주세요." value="" />
+            <button class="btn_search"></button>
+          </div>
+        </div>
+        <!-- table -->
+        <div class="wrap_table">
+          <table class="table table_list">
+            <caption>약관 목록</caption>
+            <colgroup>
+              <col style="width: 60px" />
+              <col style="width: auto" />
+              <col style="width: 80px" />
+              <col style="width: 130px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">약관 명</th>
+                <th scope="col">약관 버전</th>
+                <th scope="col">등록일자</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 검색 결과가 없을 때 result_search_none 클래스 추가 -->
+              <!-- <tr class="result_search_none">
+                                <td colspan="3">검색 결과가 없습니다.</td>
+                            </tr> -->
+              <tr onClick="location.href='#none';">
+                <td>1</td>
+                <td class="text_left">SRT 승차권 예약 이용약관</td>
+                <td>1.0</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>2</td>
+                <td class="text_left">SRT 승차권 예약 이용약관</td>
+                <td>1.2</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>3</td>
+                <td class="text_left">HTA 이용약관</td>
+                <td>1.0</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>4</td>
+                <td class="text_left">자동차검사 예약 이용약관</td>
+                <td>1.0</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>5</td>
+                <td class="text_left">자동차검사 예약 이용약관</td>
+                <td>1.5</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>6</td>
+                <td class="text_left">휴양림 예약 이용약관</td>
+                <td>2.0</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>7</td>
+                <td class="text_left">SRT 승차권 예약 이용약관</td>
+                <td>1.0</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>8</td>
+                <td class="text_left">광릉수목원 예약 이용약관</td>
+                <td>1.0</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>9</td>
+                <td class="text_left">세종백두대간수목원 예약 이용약관</td>
+                <td>1.0</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>10</td>
+                <td class="text_left">세종백두대간수목원 예약 이용약관</td>
+                <td>1.1</td>
+                <td>2023-01-01</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- table end -->
+      </div>
+      <!-- pagenation -->
+      <div class="wrap_pagenation">
+        <ul class="pagenation">
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+        </ul>
+      </div>
+      <!-- pagenation end -->
+    </div>
+    <!-- 약관 검색 팝업 end -->
+
+    <!-- 서비스 검색 팝업 -->
+    <div class="popup_layer pop_lg popup_program" id="popServiceSearch">
+      <div class="pop_title">
+        <h3>서비스 검색</h3>
+        <button type="button" class="popup_close" onclick="closePop('layer','popServiceSearch'); return false;"></button>
+      </div>
+      <div class="inner">
+        <div class="search_bar_pop">
+          <div class="box_select">
+            <select class="search_select">
+              <option value="">--선택하세요--</option>
+              <option value="">서비스 명</option>
+              <option value="">제공기관 명</option>
+            </select>
+          </div>
+          <div class="box_search">
+            <input type="text" placeholder="검색어를 입력해 주세요." value="" />
+            <button class="btn_search"></button>
+          </div>
+        </div>
+        <!-- table -->
+        <div class="wrap_table">
+          <table class="table table_list">
+            <caption>서비스 목록</caption>
+            <colgroup>
+              <col style="width: 60px" />
+              <col style="width: auto" />
+              <col style="width: 160px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">서비스 명</th>
+                <th scope="col">제공기관 명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 검색 결과가 없을 때 result_search_none 클래스 추가 -->
+              <!-- <tr class="result_search_none">
+                                <td colspan="3">검색 결과가 없습니다.</td>
+                            </tr> -->
+              <tr onClick="location.href='#none';">
+                <td>1</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>2</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>3</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>4</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>5</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>6</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>7</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>8</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>9</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+              <tr onClick="location.href='#none';">
+                <td>10</td>
+                <td class="text_left">서비스 1</td>
+                <td>제공기관 01</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- table end -->
+      </div>
+      <!-- pagenation -->
+      <div class="wrap_pagenation">
+        <ul class="pagenation">
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+          <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+        </ul>
+      </div>
+      <!-- pagenation end -->
+    </div>
+    <!-- 서비스 검색 팝업 end -->
+  </body>
+</html>

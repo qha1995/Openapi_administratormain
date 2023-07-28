@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공공서비스 개방 플랫폼 관리자</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/fontset.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- JS -->
+  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+  <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/app.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="gnb_left"></nav>
+    <div class="wrap_contents">
+      <div class="status_bar"></div>
+      <div class="contents">
+        <!-- page content start  -->
+        <div class="wrap_breadcrumb">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">서비스 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">기관 관리</a>
+            </li>
+            <li class="breadcrumbs_item">
+              <a href="javascript:;">기관 등록</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="page_title">기관 등록</h2>
+        <div class="page_content">
+
+          <!-- table -->
+          <h3 class="table_title">기관 정보</h3>
+          <div class="wrap_table">
+            <table class="table table_row text_start">
+              <caption>기관 정보</caption>
+              <colgroup>
+                <col style="width: 220px" />
+                <col style="width: auto" />
+                <col style="width: 220px" />
+                <col style="width: auto" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <p class="asterisk">기관 구분</p>
+                  </th>
+                  <td colspan="3">
+                    <div class="wrap_radio">
+                      <div class="box_radio">
+                        <input type="radio" class="rdobtn" id="rd03" name="rdo_group02" />
+                        <label for="rd03" class="label_txt">이용기관</label>
+                      </div>
+                      <div class="box_radio">
+                        <input type="radio" class="rdobtn" id="rd04" name="rdo_group02" />
+                        <label for="rd04" class="label_txt">제공기관</label>
+                      </div>
+                      <div class="box_radio">
+                        <input type="radio" class="rdobtn" id="rd05" name="rdo_group02" />
+                        <label for="rd05" class="label_txt">운영기관</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <p class="asterisk">기관 명</p>
+                  </th>
+                  <td colspan="3">
+                    <input type="text" placeholder="사업자 등록 상의 상호명을 적어주세요." value="" />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <p class="asterisk">사업자,법인 등록번호</p>
+                  </th>
+                  <td colspan="3">
+                    <div class="flex gap10">
+                      <select class="search_select">
+                        <option value="">사업자 등록번호</option>
+                        <option value="">법인 등록번호</option>
+                      </select>
+                      <input type="text" placeholder="사업자·법인 등록번호를 ‘-’를 제외하고 입력하세요." value="" />
+                      <button type="button" class="btn_inline sm" onclick="openPop('layer','popOverlapChck'); return false;">중복조회</button>
+                      <!-- <button type="button" class="btn_inline sm" onclick="openPop('layer','popOverlapCorpChck'); return false;">중복조회</button> -->
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">
+                    <p class="asterisk">사업장 소재지</p>
+                  </th>
+                  <td colspan="3">
+                    <div class="flex gap10">
+                      <input type="text" placeholder="우편번호를 입력하세요." value="" />
+                      <a href="javascript:;" target="_self" class="btn_inline sm">주소검색</a>
+                      <input type="text" placeholder="도로명 주소를 입력하세요." value="" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <input type="text" placeholder="나머지 주소를 입력하세요." value="" />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <p class="asterisk">대표자 명</p>
+                  </th>
+                  <td>
+                    <input type="text" placeholder="기관의 대표자 이름을 입력해 주세요." value="" />
+                  </td>
+                  <th scope="row">
+                    <p class="asterisk">대표 전화번호</p>
+                  </th>
+                  <td>
+                    <input type="text" placeholder="대표 전화번호를 ‘-’를 제외하고 입력하세요. (예: 01023541234)" value="" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="table_title">기관 대표 관리자</h3>
+          <table class="table table_list">
+            <caption>기관 대표 관리자</caption>
+            <colgroup>
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <p class="">부서 명</p>
+                </th>
+                <th scope="col">
+                  <p class="asterisk">담당자 명</p>
+                </th>
+                <th scope="col">
+                  <p class="">사무실전화</p>
+                </th>
+                <th scope="col">
+                  <p class="asterisk">휴대 전화</p>
+                </th>
+                <th scope="col">
+                  <p class="asterisk">이메일</p>
+                </th>
+                <th scope="col">
+                  <p class="asterisk">기관대표여부</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="text" placeholder="소속된 부서명을 입력하세요" value="" />
+                </td>
+                <td>
+                  <input type="text" placeholder="담당자 명을 입력하세요." value="" />
+                </td>
+                <td>
+                  <input type="text" placeholder=" ‘-’를 제외하고 입력하세요." value="" />
+                </td>
+                <td>
+                  <input type="text" placeholder=" ‘-’를 제외하고 입력하세요" value="" />
+                </td>
+                <td>
+                  <input type="text" placeholder="이메일을 입력하세요." value="" />
+                </td>
+                <td>
+                  <div class="box_select width_100">
+                    <select class="search_select width_100">
+                      <option value="">--선택하세요--</option>
+                      <option value="">Yes</option>
+                      <option value="">No</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="table_title">기관 이용승인 서비스 정보</h3>
+          <div class="button_table_action">
+            <a href="javascript:;" target="_self" class="btn_submit filled_blue small">추가</a>
+            <a href="javascript:;" target="_self" class="btn_submit lined_blue small">삭제</a>
+          </div>
+          <table class="table table_list">
+            <caption>기관 이용승인 서비스 정보</caption>
+            <colgroup>
+              <col style="width: 90px" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+              <col style="width: auto" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <p class="">번호</p>
+                </th>
+                <th scope="col">
+                  <p class="asterisk">서비스명</p>
+                </th>
+                <th scope="col">
+                  <p class="asterisk">공모구분</p>
+                </th>
+                <th scope="col">
+                  <p class="asterisk">신청일자</p>
+                </th>
+                <th scope="col">
+                  <p class="asterisk">신청상태</p>
+                </th>
+                <th scope="col">
+                  <p class="asterisk">서비스 이용약관</p>
+                </th>
+                <th scope="col">
+                  <p class="">비고</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="wrap_check flex_center">
+                    <div class="box_checkbox">
+                      <input type="checkbox" class="checkbox" id="ch01" name="ch_group01" />
+                      <label for="ch01" class="label_txt"></label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="box_select width_100">
+                    <select class="search_select width_100 ">
+                      <option value="">--선택하세요--</option>
+                      <option value="">회사1</option>
+                      <option value="">회사2</option>
+                      <option value="">회사3</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="box_select width_100">
+                    <select class="search_select width_100 ">
+                      <option value="">--선택하세요--</option>
+                      <option value="">SRT 승차권 예약</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="box_select width_100">
+                    <select class="search_select width_100 ">
+                      <option value="">--선택하세요--</option>
+                      <option value="">정규 1차(22년)</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="box_datepicker">
+                    <input type="text" class="datepicker" placeholder="YYYY-MM-DD" />
+                  </div>
+                </td>
+                <td>
+                  <div class="flex gap10">
+                    <input type="text" placeholder="해당하는 서비스 이용약관을 입력하세요">
+                    <!-- <a href="javascript:;" target="_self" class="btn_inline sm">약관 검색</a> -->
+                    <button type="button" class="btn_inline sm" onclick="openPop('layer','popTermsSearch'); return false;">약관 검색</button>
+                  </div>
+                </td>
+                <td>
+                  <input type="text" placeholder="(공모 구분이 ‘수시’일 경우 비고에 상세 내용을 기재해 주세요.)">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- page content end -->
+        <div class="wrap_btns">
+          <a href="javascript:;" target="_self" class="btn_submit filled_gray">취소</a>
+          <a href="javascript:;" target="_self" class="btn_submit filled_blue">저장</a>
+        </div>
+      </div>
+      <!-- contents end -->
+      <footer class="footer_admin"></footer>
+    </div>
+    <!-- wrap_contents end -->
+  </div>
+  <!-- wrapper end -->
+
+  <!-- popup -->
+  <div class="mask"></div>
+
+  <!-- 약관 검색 팝업 -->
+  <div class="popup_layer pop_lg popup_program" id="popTermsSearch">
+    <div class="pop_title">
+      <h3>약관 검색</h3>
+      <button type="button" class="popup_close" onclick="closePop('layer','popTermsSearch'); return false;"></button>
+    </div>
+    <div class="inner">
+      <div class="search_bar_pop">
+        <span class="search_label">약관 구분</span>
+        <div class="box_select">
+          <select class="search_select">
+            <option value="">서비스</option>
+          </select>
+        </div>
+        <div class="box_search">
+          <input type="text" placeholder="검색어를 입력해 주세요." value="">
+          <button class="btn_search"></button>
+        </div>
+      </div>
+      <!-- table -->
+      <div class="wrap_table">
+        <table class="table table_list">
+          <caption>메뉴 목록</caption>
+          <colgroup>
+            <col style="width:60px;">
+            <col style="width:auto;">
+            <col style="width:80px;">
+            <col style="width:130px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">약관 명</th>
+              <th scope="col">약관 버전</th>
+              <th scope="col">등록일자</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 검색 결과가 없을 때 result_search_none 클래스 추가 -->
+            <!-- <tr class="result_search_none">
+                                <td colspan="3">검색 결과가 없습니다.</td>
+                            </tr> -->
+            <tr onClick="location.href='#none';">
+              <td>1</td>
+              <td class="text_left">SRT 승차권 예약 이용약관</td>
+              <td>1.0</td>
+              <td>2023-01-01</td>
+            </tr>
+            <tr onClick="location.href='#none';">
+              <td>2</td>
+              <td class="text_left">SRT 승차권 예약 이용약관</td>
+              <td>1.2</td>
+              <td>2023-01-01</td>
+            </tr>
+            <tr onClick="location.href='#none';">
+              <td>3</td>
+              <td class="text_left">HTA 이용약관</td>
+              <td>1.0</td>
+              <td>2023-01-01</td>
+            </tr>
+            <tr onClick="location.href='#none';">
+              <td>4</td>
+              <td class="text_left">자동차검사 예약 이용약관</td>
+              <td>1.0</td>
+              <td>2023-01-01</td>
+            </tr>
+            <tr onClick="location.href='#none';">
+              <td>5</td>
+              <td class="text_left">자동차검사 예약 이용약관</td>
+              <td>1.5</td>
+              <td>2023-01-01</td>
+            </tr>
+            <tr onClick="location.href='#none';">
+              <td>6</td>
+              <td class="text_left">휴양림 예약 이용약관</td>
+              <td>2.0</td>
+              <td>2023-01-01</td>
+            </tr>
+            <tr onClick="location.href='#none';">
+              <td>7</td>
+              <td class="text_left">SRT 승차권 예약 이용약관</td>
+              <td>1.0</td>
+              <td>2023-01-01</td>
+            </tr>
+            <tr onClick="location.href='#none';">
+              <td>8</td>
+              <td class="text_left">광릉수목원 예약 이용약관</td>
+              <td>1.0</td>
+              <td>2023-01-01</td>
+            </tr>
+            <tr onClick="location.href='#none';">
+              <td>9</td>
+              <td class="text_left">세종백두대간수목원 예약 이용약관</td>
+              <td>1.0</td>
+              <td>2023-01-01</td>
+            </tr>
+            <tr onClick="location.href='#none';">
+              <td>10</td>
+              <td class="text_left">세종백두대간수목원 예약 이용약관</td>
+              <td>1.1</td>
+              <td>2023-01-01</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- table end -->
+    </div>
+    <!-- pagenation -->
+    <div class="wrap_pagenation">
+      <ul class="pagenation">
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor first"></a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor prev"></a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor next"></a></li>
+        <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor last"></a></li>
+      </ul>
+    </div>
+    <!-- pagenation end -->
+  </div>
+  <!-- 약관 검색 팝업 end -->
+
+  <!-- 법인 등록번호 중복 조회 팝업 -->
+  <div class="popup_layer pop_lg" id="popOverlapCorpChck">
+    <div class="pop_title">
+      <h3>법인 등록번호 중복 조회</h3>
+      <button type="button" class="popup_close" onclick="closePop('layer','popOverlapCorpChck'); return false;"></button>
+    </div>
+    <div class="inner">
+      <p class="note_info">법인 등록번호 중복 조회</p>
+      <div class="box_search mt2">
+        <div class="flex">
+          <input type="text" id="input_type01" class="attached_file" placeholder="법인 등록번호를 입력하세요">
+          <a href="javascript:;" target="_self" class="btn_inline lined" for="input_type01">중복 조회</a>
+        </div>
+        <p class="attached_note color_blue">등록 가능한 법인 등록번호입니다.</p>
+        <p class="attached_note color_red">이미 등록된 법인 등록번호입니다.</p>
+      </div>
+    </div>
+    <div class="wrap_btns">
+      <button type="submit" class="btn_submit btn_all md" onclick="closePop('layer','popOverlapCorpChck'); return false;">사용</button>
+      <button type="submit" class="btn_submit btn_all md disabled" onclick="closePop('layer','popOverlapCorpChck'); return false;">사용</button>
+    </div>
+  </div>
+  <!-- 법인 등록번호 중복 조회 팝업 end -->
+
+  <!-- 사업자 등록번호 중복 조회 팝업 -->
+  <div class="popup_layer pop_lg" id="popOverlapChck">
+    <div class="pop_title">
+      <h3>사업자 등록번호 중복 조회</h3>
+      <button type="button" class="popup_close" onclick="closePop('layer','popOverlapChck'); return false;"></button>
+    </div>
+    <div class="inner">
+      <p class="note_info">사업자 등록번호 중복 조회</p>
+      <div class="box_search mt2">
+        <div class="flex">
+          <input type="text" id="input_type01" class="attached_file" placeholder="사업자 등록번호를 입력하세요">
+          <a href="javascript:;" target="_self" class="btn_inline lined" for="input_type01">중복 조회</a>
+        </div>
+        <p class="attached_note color_blue">등록 가능한 사업자 등록번호입니다.</p>
+        <p class="attached_note color_red">이미 등록된 사업자 등록번호입니다.</p>
+      </div>
+    </div>
+    <div class="wrap_btns">
+      <button type="submit" class="btn_submit btn_all md" onclick="closePop('layer','popOverlapChck'); return false;">사용</button>
+      <button type="submit" class="btn_submit btn_all md disabled" onclick="closePop('layer','popOverlapChck'); return false;">사용</button>
+    </div>
+  </div>
+  <!-- 사업자 등록번호 중복 조회 팝업 end-->
+
+</body>
+
+</html>

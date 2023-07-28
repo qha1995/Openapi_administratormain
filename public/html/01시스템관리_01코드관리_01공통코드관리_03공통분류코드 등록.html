@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공서비스 개방 플랫폼 관리자</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../js/jquery-ui-1.13.2/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/fontset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="gnb_left"></nav>
+        <div class="wrap_contents">
+
+            <div class="status_bar"></div>
+            <div class="contents">
+                <!-- page content start  -->
+                <div class="wrap_breadcrumb">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs_item"><a href="javascript:;">시스템 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">코드 관리</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">공통분류코드</a></li>
+                        <li class="breadcrumbs_item"><a href="javascript:;">공통분류코드 등록</a></li>
+                    </ul>
+                </div>
+                <h2 class="page_title">공통분류코드 등록</h2>
+                <div class="page_content">
+                    <!-- table -->
+                    <div class="wrap_table">
+                        <table class="table table_row">
+                            <caption>공통분류코드 등록</caption>
+                            <colgroup>
+                                <col style="width:180px;">
+                                <col style="width:auto; min-width: 300px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">코드 ID</p>
+                                    </th>
+                                    <td>
+                                        <input type="text" placeholder="코드 ID를 입력해주세요.">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">코드 명</p>
+                                    </th>
+                                    <td>
+                                        <input type="text" placeholder="코드 명을 입력해주세요.">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p>코드 설명</p>
+                                    </th>
+                                    <td>
+                                        <div class="wrap_textarea">
+                                            <textarea name="" id="" placeholder="코드 설명을 입력해주세요."></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <p class="asterisk">사용 여부</p>
+                                    </th>
+                                    <td>
+                                        <div class="wrap_radio">
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd01" name="rdo_group01">
+                                                <label for="rd01" class="label_txt">YES</label>
+                                            </div>
+                                            <div class="box_radio">
+                                                <input type="radio" class="rdobtn" id="rd02" name="rdo_group01">
+                                                <label for="rd02" class="label_txt">NO</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- table end -->
+                </div>
+                <!-- page content end -->
+                <!-- wrap_btns -->
+                <div class="wrap_btns">
+                    <a href="javascript:;" target="_self" class="btn_submit filled_gray">취소</a>
+                    <a href="javascript:;" target="_self" class="btn_submit filled_blue">등록</a>
+                </div>
+                <!-- wrap_btns end -->
+            </div>
+            <!-- contents end -->
+
+            <footer class="footer_admin"></footer>
+        </div>
+        <!-- wrap_contents end -->
+    </div>
+    <!-- wrapper end -->
+
+</body>
+
+</html>
